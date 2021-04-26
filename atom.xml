@@ -3,11 +3,11 @@
   <title>Hexo</title>
   
   
-  <link href="https://plcreed.github.io/atom.xml" rel="self"/>
+  <link href="https://www.plcreed.com/atom.xml" rel="self"/>
   
-  <link href="https://plcreed.github.io/"/>
+  <link href="https://www.plcreed.com/"/>
   <updated>2021-04-26T16:00:47.421Z</updated>
-  <id>https://plcreed.github.io/</id>
+  <id>https://www.plcreed.com/</id>
   
   <author>
     <name>John Doe</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://plcreed.github.io/2021/04/27/hello-world/"/>
-    <id>https://plcreed.github.io/2021/04/27/hello-world/</id>
+    <link href="https://www.plcreed.com/2021/04/27/hello-world/"/>
+    <id>https://www.plcreed.com/2021/04/27/hello-world/</id>
     <published>2021-04-26T16:00:47.420Z</published>
     <updated>2021-04-26T16:00:47.421Z</updated>
     
