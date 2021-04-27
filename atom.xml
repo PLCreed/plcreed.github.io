@@ -6,7 +6,7 @@
   <link href="https://www.plcreed.com/atom.xml" rel="self"/>
   
   <link href="https://www.plcreed.com/"/>
-  <updated>2021-04-27T13:05:04.600Z</updated>
+  <updated>2021-04-27T13:35:28.632Z</updated>
   <id>https://www.plcreed.com/</id>
   
   <author>
@@ -21,12 +21,21 @@
     <link href="https://www.plcreed.com/2021/04/27/hello-world/"/>
     <id>https://www.plcreed.com/2021/04/27/hello-world/</id>
     <published>2021-04-27T01:25:00.000Z</published>
-    <updated>2021-04-27T13:05:04.600Z</updated>
+    <updated>2021-04-27T13:35:28.632Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;.&lt;br&gt;as&lt;/p&gt;
+</summary>
+        
+      
     
     
     
-    
-    <category term="Markdown" scheme="https://www.plcreed.com/categories/Markdown/"/>
+    <category term="Qt" scheme="https://www.plcreed.com/categories/Qt/"/>
     
     
     <category term="Qt" scheme="https://www.plcreed.com/tags/Qt/"/>
