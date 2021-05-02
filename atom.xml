@@ -6,7 +6,7 @@
   <link href="https://www.plcreed.com/atom.xml" rel="self"/>
   
   <link href="https://www.plcreed.com/"/>
-  <updated>2021-04-27T13:35:28.632Z</updated>
+  <updated>2021-02-02T12:45:14.000Z</updated>
   <id>https://www.plcreed.com/</id>
   
   <author>
@@ -17,28 +17,423 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>typora-vue-theme主题介绍</title>
-    <link href="https://www.plcreed.com/2021/04/27/hello-world/"/>
-    <id>https://www.plcreed.com/2021/04/27/hello-world/</id>
-    <published>2021-04-27T01:25:00.000Z</published>
-    <updated>2021-04-27T13:35:28.632Z</updated>
+    <title></title>
+    <link href="https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/readme/"/>
+    <id>https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/readme/</id>
+    <published>2021-05-02T04:44:53.789Z</published>
+    <updated>2021-02-02T12:45:14.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;.&lt;br&gt;as&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;h1 id=&quot;《C-Primer中文版（第5版）》笔记&quot;&gt;&lt;a href=&quot;#《C-Primer中文版（第5版）》笔记&quot; class=&quot;headerlink&quot; title=&quot;《C++ Primer中文版（第5版）》笔记&quot;&gt;&lt;/a&gt;《C++</summary>
         
       
     
     
     
-    <category term="Qt" scheme="https://www.plcreed.com/categories/Qt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-9-sequential-containers/readme/"/>
+    <id>https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-9-sequential-containers/readme/</id>
+    <published>2021-05-02T04:44:53.787Z</published>
+    <updated>2021-02-02T12:45:14.000Z</updated>
     
     
-    <category term="Qt" scheme="https://www.plcreed.com/tags/Qt/"/>
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;第9章-顺序容器&quot;&gt;&lt;a href=&quot;#第9章-顺序容器&quot; class=&quot;headerlink&quot; title=&quot;第9章 顺序容器&quot;&gt;&lt;/a&gt;第9章 顺序容器&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-8-the-io-library/readme/"/>
+    <id>https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-8-the-io-library/readme/</id>
+    <published>2021-05-02T04:44:53.768Z</published>
+    <updated>2021-02-02T12:45:14.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;第8章-IO库&quot;&gt;&lt;a href=&quot;#第8章-IO库&quot; class=&quot;headerlink&quot; title=&quot;第8章 IO库&quot;&gt;&lt;/a&gt;第8章</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-7-classes/readme/"/>
+    <id>https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-7-classes/readme/</id>
+    <published>2021-05-02T04:44:53.763Z</published>
+    <updated>2021-02-02T12:45:14.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;第7章-类&quot;&gt;&lt;a href=&quot;#第7章-类&quot; class=&quot;headerlink&quot; title=&quot;第7章 类&quot;&gt;&lt;/a&gt;第7章 类&lt;/h1&gt;&lt;p&gt;类的基本思想是数据抽象（data</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-6-functions/readme/"/>
+    <id>https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-6-functions/readme/</id>
+    <published>2021-05-02T04:44:53.762Z</published>
+    <updated>2021-02-02T12:45:14.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;第6章-函数&quot;&gt;&lt;a href=&quot;#第6章-函数&quot; class=&quot;headerlink&quot; title=&quot;第6章 函数&quot;&gt;&lt;/a&gt;第6章 函数&lt;/h1&gt;&lt;h2 id=&quot;函数基础（Function-Basics）&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-5-statements/readme/"/>
+    <id>https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-5-statements/readme/</id>
+    <published>2021-05-02T04:44:53.760Z</published>
+    <updated>2021-02-02T12:45:14.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;第5章-语句&quot;&gt;&lt;a href=&quot;#第5章-语句&quot; class=&quot;headerlink&quot; title=&quot;第5章 语句&quot;&gt;&lt;/a&gt;第5章 语句&lt;/h1&gt;&lt;h2 id=&quot;简单语句（Simple-Statements）&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-4-expressions/readme/"/>
+    <id>https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-4-expressions/readme/</id>
+    <published>2021-05-02T04:44:53.758Z</published>
+    <updated>2021-02-02T12:45:14.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;第4章-表达式&quot;&gt;&lt;a href=&quot;#第4章-表达式&quot; class=&quot;headerlink&quot; title=&quot;第4章 表达式&quot;&gt;&lt;/a&gt;第4章 表达式&lt;/h1&gt;&lt;h2 id=&quot;基础（Fundamentals）&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-3-strings-vectors-and-arrays/readme/"/>
+    <id>https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-3-strings-vectors-and-arrays/readme/</id>
+    <published>2021-05-02T04:44:53.755Z</published>
+    <updated>2021-02-02T12:45:14.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;第3章-字符串、向量和数组&quot;&gt;&lt;a href=&quot;#第3章-字符串、向量和数组&quot; class=&quot;headerlink&quot; title=&quot;第3章 字符串、向量和数组&quot;&gt;&lt;/a&gt;第3章 字符串、向量和数组&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-2-variables-and-basic-types/readme/"/>
+    <id>https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-2-variables-and-basic-types/readme/</id>
+    <published>2021-05-02T04:44:53.748Z</published>
+    <updated>2021-02-02T12:45:14.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;第2章-变量和基本类型&quot;&gt;&lt;a href=&quot;#第2章-变量和基本类型&quot; class=&quot;headerlink&quot; title=&quot;第2章 变量和基本类型&quot;&gt;&lt;/a&gt;第2章 变量和基本类型&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-19-specialized-tools-and-techniques/readme/"/>
+    <id>https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-19-specialized-tools-and-techniques/readme/</id>
+    <published>2021-05-02T04:44:53.744Z</published>
+    <updated>2021-02-02T12:45:14.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;第19章-特殊工具与技术&quot;&gt;&lt;a href=&quot;#第19章-特殊工具与技术&quot; class=&quot;headerlink&quot; title=&quot;第19章 特殊工具与技术&quot;&gt;&lt;/a&gt;第19章 特殊工具与技术&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-18-tools-for-large-programs/readme/"/>
+    <id>https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-18-tools-for-large-programs/readme/</id>
+    <published>2021-05-02T04:44:53.743Z</published>
+    <updated>2021-02-02T12:45:14.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;第18章-用于大型程序的工具&quot;&gt;&lt;a href=&quot;#第18章-用于大型程序的工具&quot; class=&quot;headerlink&quot; title=&quot;第18章 用于大型程序的工具&quot;&gt;&lt;/a&gt;第18章 用于大型程序的工具&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-17-specialized-library-facilities/readme/"/>
+    <id>https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-17-specialized-library-facilities/readme/</id>
+    <published>2021-05-02T04:44:53.740Z</published>
+    <updated>2021-02-02T12:45:14.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;第17章-标准库特殊设施&quot;&gt;&lt;a href=&quot;#第17章-标准库特殊设施&quot; class=&quot;headerlink&quot; title=&quot;第17章 标准库特殊设施&quot;&gt;&lt;/a&gt;第17章 标准库特殊设施&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-16-templates-and-generic-programming/readme/"/>
+    <id>https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-16-templates-and-generic-programming/readme/</id>
+    <published>2021-05-02T04:44:53.723Z</published>
+    <updated>2021-02-02T12:45:14.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;第16章-模板与泛型编程&quot;&gt;&lt;a href=&quot;#第16章-模板与泛型编程&quot; class=&quot;headerlink&quot; title=&quot;第16章 模板与泛型编程&quot;&gt;&lt;/a&gt;第16章 模板与泛型编程&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-15-object-oriented-programming/readme/"/>
+    <id>https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-15-object-oriented-programming/readme/</id>
+    <published>2021-05-02T04:44:53.721Z</published>
+    <updated>2021-02-02T12:45:14.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;第15章-面向对象程序设计&quot;&gt;&lt;a href=&quot;#第15章-面向对象程序设计&quot; class=&quot;headerlink&quot; title=&quot;第15章 面向对象程序设计&quot;&gt;&lt;/a&gt;第15章 面向对象程序设计&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-14-overloaded-operations-and-conversions/readme/"/>
+    <id>https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-14-overloaded-operations-and-conversions/readme/</id>
+    <published>2021-05-02T04:44:53.720Z</published>
+    <updated>2021-02-02T12:45:14.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;第14章-重载运算与类型转换&quot;&gt;&lt;a href=&quot;#第14章-重载运算与类型转换&quot; class=&quot;headerlink&quot; title=&quot;第14章 重载运算与类型转换&quot;&gt;&lt;/a&gt;第14章 重载运算与类型转换&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-13-copy-control/readme/"/>
+    <id>https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-13-copy-control/readme/</id>
+    <published>2021-05-02T04:44:53.717Z</published>
+    <updated>2021-02-02T12:45:14.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;第13章-拷贝控制&quot;&gt;&lt;a href=&quot;#第13章-拷贝控制&quot; class=&quot;headerlink&quot; title=&quot;第13章 拷贝控制&quot;&gt;&lt;/a&gt;第13章</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-12-dynamic-memory/readme/"/>
+    <id>https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-12-dynamic-memory/readme/</id>
+    <published>2021-05-02T04:44:53.716Z</published>
+    <updated>2021-02-02T12:45:14.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;第12章-动态内存&quot;&gt;&lt;a href=&quot;#第12章-动态内存&quot; class=&quot;headerlink&quot; title=&quot;第12章 动态内存&quot;&gt;&lt;/a&gt;第12章 动态内存&lt;/h1&gt;&lt;p&gt;程序用堆（heap）来存储动态分配（dynamically</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-11-associative-containers/readme/"/>
+    <id>https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-11-associative-containers/readme/</id>
+    <published>2021-05-02T04:44:53.709Z</published>
+    <updated>2021-02-02T12:45:14.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;第11章-关联容器&quot;&gt;&lt;a href=&quot;#第11章-关联容器&quot; class=&quot;headerlink&quot; title=&quot;第11章 关联容器&quot;&gt;&lt;/a&gt;第11章</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-10-generic-algorithms/readme/"/>
+    <id>https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-10-generic-algorithms/readme/</id>
+    <published>2021-05-02T04:44:53.701Z</published>
+    <updated>2021-02-02T12:45:14.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;第10章-泛型算法&quot;&gt;&lt;a href=&quot;#第10章-泛型算法&quot; class=&quot;headerlink&quot; title=&quot;第10章 泛型算法&quot;&gt;&lt;/a&gt;第10章 泛型算法&lt;/h1&gt;&lt;h2 id=&quot;概述（Overview）&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-1-getting-started/readme/"/>
+    <id>https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes-cn-master/chapter-1-getting-started/readme/</id>
+    <published>2021-05-02T04:44:53.693Z</published>
+    <updated>2021-02-02T12:45:14.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;第1章-开始&quot;&gt;&lt;a href=&quot;#第1章-开始&quot; class=&quot;headerlink&quot; title=&quot;第1章 开始&quot;&gt;&lt;/a&gt;第1章 开始&lt;/h1&gt;&lt;p&gt;最简单的&lt;code&gt;main&lt;/code&gt;函数：&lt;/p&gt;
+&lt;pre class=&quot;line-numbers</summary>
+        
+      
+    
+    
+    
     
   </entry>
   
