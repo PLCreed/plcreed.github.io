@@ -458,14 +458,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.8k
+                    4.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    10 分
+                    20 分
                 </div>
                 
 
@@ -488,162 +488,221 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="第5章-语句"><a href="#第5章-语句" class="headerlink" title="第5章 语句"></a>第5章 语句</h1><h2 id="简单语句（Simple-Statements）"><a href="#简单语句（Simple-Statements）" class="headerlink" title="简单语句（Simple Statements）"></a>简单语句（Simple Statements）</h2><p>如果在程序的某个地方，语法上需要一条语句但是逻辑上不需要，则应该使用空语句（null statement）。空语句中只含有一个单独的分号<code>;</code>。</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F; read until we hit end-of-file or find an input equal to sought
-while (cin &gt;&gt; s &amp;&amp; s !&#x3D; sought)
-    ;   &#x2F;&#x2F; null statement<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+                <h1 id="第3章-字符串、向量和数组"><a href="#第3章-字符串、向量和数组" class="headerlink" title="第3章 字符串、向量和数组"></a>第3章 字符串、向量和数组</h1><h2 id="命名空间的using声明（Namespace-using-Declarations）"><a href="#命名空间的using声明（Namespace-using-Declarations）" class="headerlink" title="命名空间的using声明（Namespace using Declarations）"></a>命名空间的using声明（Namespace using Declarations）</h2><p>使用<code>using</code>声明后就无须再通过专门的前缀去获取所需的名字了。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">using std::cout;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>使用空语句时应该加上注释，从而令读这段代码的人知道该语句是有意省略的。</p>
-<p>多余的空语句并非总是无害的。</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F; disaster: extra semicolon: loop body is this null statement
-while (iter !&#x3D; svec.end()) ;    &#x2F;&#x2F; the while body is the empty statement
-    ++iter;     &#x2F;&#x2F; increment is not part of the loop<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>程序中使用的每个名字都需要用独立的<code>using</code>声明引入。</p>
+<p>头文件中通常不应该包含<code>using</code>声明。</p>
+<h2 id="标准库类型string（Library-string-Type）"><a href="#标准库类型string（Library-string-Type）" class="headerlink" title="标准库类型string（Library string Type）"></a>标准库类型string（Library string Type）</h2><p>标准库类型<code>string</code>表示可变长的字符序列，定义在头文件<em>string</em>中。</p>
+<h3 id="定义和初始化string对象（Defining-and-Initializing-strings）"><a href="#定义和初始化string对象（Defining-and-Initializing-strings）" class="headerlink" title="定义和初始化string对象（Defining and Initializing strings）"></a>定义和初始化string对象（Defining and Initializing strings）</h3><p>初始化<code>string</code>的方式：</p>
+<p><img src="Images/3-1.png" alt="3-1"></p>
+<p>如果使用等号初始化一个变量，实际上执行的是拷贝初始化（copy initialization），编译器把等号右侧的初始值拷贝到新创建的对象中去。如果不使用等号，则执行的是直接初始化（direct initialization）。</p>
+<h3 id="string对象上的操作（Operations-on-strings）"><a href="#string对象上的操作（Operations-on-strings）" class="headerlink" title="string对象上的操作（Operations on strings）"></a>string对象上的操作（Operations on strings）</h3><p><code>string</code>的操作：</p>
+<p><img src="Images/3-2.png" alt="3-2"></p>
+<p>在执行读取操作时，<code>string</code>对象会自动忽略开头的空白（空格符、换行符、制表符等）并从第一个真正的字符开始读取，直到遇见下一处空白为止。</p>
+<p>使用<code>getline</code>函数可以读取一整行字符。该函数只要遇到换行符就结束读取并返回结果，如果输入的开始就是一个换行符，则得到空<code>string</code>。触发<code>getline</code>函数返回的那个换行符实际上被丢弃掉了，得到的<code>string</code>对象中并不包含该换行符。</p>
+<p><code>size</code>函数返回<code>string</code>对象的长度，返回值是<code>string::size_type</code>类型，这是一种无符号类型。要使用<code>size_type</code>，必须先指定它是由哪种类型定义的。</p>
+<p>如果一个表达式中已经有了<code>size</code>函数就不要再使用<code>int</code>了，这样可以避免混用<code>int</code>和<code>unsigned int</code>可能带来的问题。</p>
+<p>当把<code>string</code>对象和字符字面值及字符串字面值混合在一条语句中使用时，必须确保每个加法运算符两侧的运算对象中至少有一个是<code>string</code>。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">string s4 &#x3D; s1 + &quot;, &quot;;          &#x2F;&#x2F; ok: adding a string and a literal
+string s5 &#x3D; &quot;hello&quot; + &quot;, &quot;;     &#x2F;&#x2F; error: no string operand
+string s6 &#x3D; s1 + &quot;, &quot; + &quot;world&quot;;    &#x2F;&#x2F; ok: each + has a string operand<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<p>复合语句（compound statement）是指用花括号括起来的（可能为空）语句和声明的序列。复合语句也叫做块（block），一个块就是一个作用域。在块中引入的名字只能在块内部以及嵌套在块中的子块里访问。通常，名字在有限的区域内可见，该区域从名字定义处开始，到名字所在（最内层）块的结尾处为止。</p>
-<p>语句块不以分号作为结束。</p>
-<p>空块的作用等价于空语句。</p>
-<h2 id="语句作用域（Statement-Scope）"><a href="#语句作用域（Statement-Scope）" class="headerlink" title="语句作用域（Statement Scope）"></a>语句作用域（Statement Scope）</h2><p>可以在<code>if</code>、<code>switch</code>、<code>while</code>和<code>for</code>语句的控制结构内定义变量，这些变量只在相应语句的内部可见，一旦语句结束，变量也就超出了其作用范围。</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">while (int i &#x3D; get_num())   &#x2F;&#x2F; i is created and initialized on each iteration
-    cout &lt;&lt; i &lt;&lt; endl;
-i &#x3D; 0;  &#x2F;&#x2F; error: i is not accessible outside the loop<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="条件语句（Conditional-Statements）"><a href="#条件语句（Conditional-Statements）" class="headerlink" title="条件语句（Conditional Statements）"></a>条件语句（Conditional Statements）</h2><h3 id="if语句（The-if-Statement）"><a href="#if语句（The-if-Statement）" class="headerlink" title="if语句（The if Statement）"></a>if语句（The if Statement）</h3><p><code>if</code>语句的形式：</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">if (condition)
-    statement<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p><code>if-else</code>语句的形式：</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">if (condition)
-    statement
-else
-    statement2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>其中<em>condition</em>是判断条件，可以是一个表达式或者初始化了的变量声明。<em>condition</em>必须用圆括号括起来。</p>
-<ul>
-<li>如果<em>condition</em>为真，则执行<em>statement</em>。执行完成后，程序继续执行<code>if</code>语句后面的其他语句。</li>
-<li>如果<em>condition</em>为假，则跳过<em>statement</em>。对于简单<code>if</code>语句来说，程序直接执行<code>if</code>语句后面的其他语句；对于<code>if-else</code>语句来说，程序先执行<em>statement2</em>，再执行<code>if</code>语句后面的其他语句。</li>
-</ul>
-<p><code>if</code>语句可以嵌套，其中<code>else</code>与离它最近的尚未匹配的<code>if</code>相匹配。</p>
-<h3 id="switch语句（The-switch-Statement）"><a href="#switch语句（The-switch-Statement）" class="headerlink" title="switch语句（The switch Statement）"></a>switch语句（The switch Statement）</h3><p><code>switch</code>语句的形式：</p>
-<p><img src="Images/5-1.png" alt="5-1"></p>
-<p><code>switch</code>语句先对括号里的表达式求值，值转换成整数类型后再与每个<code>case</code>标签（case label）的值进行比较。如果表达式的值和某个<code>case</code>标签匹配，程序从该标签之后的第一条语句开始执行，直到到达<code>switch</code>的结尾或者遇到<code>break</code>语句为止。<code>case</code>标签必须是整型常量表达式。</p>
-<p>通常情况下每个<code>case</code>分支后都有<code>break</code>语句。如果确实不应该出现<code>break</code>语句，最好写一段注释说明程序的逻辑。</p>
-<p>尽管<code>switch</code>语句没有强制要求在最后一个<code>case</code>标签后写上<code>break</code>，但为了安全起见，最好添加<code>break</code>。这样即使以后增加了新的<code>case</code>分支，也不用再在前面补充<code>break</code>语句了。</p>
-<p><code>switch</code>语句中可以添加一个<code>default</code>标签（default label），如果没有任何一个<code>case</code>标签能匹配上<code>switch</code>表达式的值，程序将执行<code>default</code>标签后的语句。</p>
-<p>即使不准备在<code>default</code>标签下做任何操作，程序中也应该定义一个<code>default</code>标签。其目的在于告诉他人我们已经考虑到了默认情况，只是目前不需要实际操作。</p>
-<p>不允许跨过变量的初始化语句直接跳转到该变量作用域内的另一个位置。如果需要为<code>switch</code>的某个<code>case</code>分支定义并初始化一个变量，则应该把变量定义在块内。</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">case true:
-&#123;
-    &#x2F;&#x2F; ok: declaration statement within a statement block
-    string file_name &#x3D; get_file_name();
-    &#x2F;&#x2F; ...
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="迭代语句（Iterative-Statements）"><a href="#迭代语句（Iterative-Statements）" class="headerlink" title="迭代语句（Iterative Statements）"></a>迭代语句（Iterative Statements）</h2><p>迭代语句通常称为循环，它重复执行操作直到满足某个条件才停止。<code>while</code>和<code>for</code>语句在执行循环体之前检查条件，<code>do-while</code>语句先执行循环体再检查条件。</p>
-<h3 id="while语句（The-while-Statement）"><a href="#while语句（The-while-Statement）" class="headerlink" title="while语句（The while Statement）"></a>while语句（The while Statement）</h3><p><code>while</code>语句的形式：</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">while (condition)
-    statement<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>只要<em>condition</em>的求值结果为<code>true</code>，就一直执行<em>statement</em>（通常是一个块）。<em>condition</em>不能为空，如果<em>condition</em>第一次求值就是<code>false</code>，<em>statement</em>一次都不会执行。</p>
-<p>定义在<code>while</code>条件部分或者循环体内的变量每次迭代都经历从创建到销毁的过程。</p>
-<p>在不确定迭代次数，或者想在循环结束后访问循环控制变量时，使用<code>while</code>比较合适。</p>
-<h3 id="传统的for语句（Traditional-for-Statement）"><a href="#传统的for语句（Traditional-for-Statement）" class="headerlink" title="传统的for语句（Traditional for Statement）"></a>传统的for语句（Traditional for Statement）</h3><p><code>for</code>语句的形式：</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">for (initializer; condition; expression)
-    statement<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>一般情况下，<em>initializer</em>负责初始化一个值，这个值会随着循环的进行而改变。<em>condition</em>作为循环控制的条件，只要<em>condition</em>的求值结果为<code>true</code>，就执行一次<em>statement</em>。执行后再由<em>expression</em>负责修改<em>initializer</em>初始化的变量，这个变量就是<em>condition</em>检查的对象。如果<em>condition</em>第一次求值就是<code>false</code>，<em>statement</em>一次都不会执行。<em>initializer</em>中也可以定义多个对象，但是只能有一条声明语句，因此所有变量的基础类型必须相同。</p>
-<p><code>for</code>语句头中定义的对象只在<code>for</code>循环体内可见。</p>
-<h3 id="范围for语句（Range-for-Statement）"><a href="#范围for语句（Range-for-Statement）" class="headerlink" title="范围for语句（Range for Statement）"></a>范围for语句（Range for Statement）</h3><p>范围<code>for</code>语句的形式：</p>
+<p>为了与C兼容，C++语言中的字符串字面值并不是标准库<code>string</code>的对象。</p>
+<h3 id="处理string对象中的字符（Dealing-with-the-Characters-in-a-string）"><a href="#处理string对象中的字符（Dealing-with-the-Characters-in-a-string）" class="headerlink" title="处理string对象中的字符（Dealing with the Characters in a string）"></a>处理string对象中的字符（Dealing with the Characters in a string）</h3><p>头文件<em>cctype</em>中的字符操作函数：</p>
+<p><img src="Images/3-3.png" alt="3-3"></p>
+<p>建议使用C++版本的C标准库头文件。C语言中名称为<em>name.h</em>的头文件，在C++中则被命名为<em>cname</em>。</p>
+<p>C++11提供了范围<code>for</code>（range for）语句，可以遍历给定序列中的每个元素并执行某种操作。</p>
 <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">for (declaration : expression)
     statement<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p>其中<em>expression</em>表示一个序列，拥有能返回迭代器的<code>begin</code>和<code>end</code>成员。<em>declaration</em>定义一个变量，序列中的每个元素都应该能转换成该变量的类型（可以使用<code>auto</code>）。如果需要对序列中的元素执行写操作，循环变量必须声明成引用类型。每次迭代都会重新定义循环控制变量，并将其初始化为序列中的下一个值，之后才会执行<em>statement</em>。</p>
-<h3 id="do-while语句（The-do-while-Statement）"><a href="#do-while语句（The-do-while-Statement）" class="headerlink" title="do-while语句（The do-while Statement）"></a>do-while语句（The do-while Statement）</h3><p><code>do-while</code>语句的形式：</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">do
-    statement
-while (condition);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><em>expression</em>部分是一个对象，用于表示一个序列。<em>declaration</em>部分负责定义一个变量，该变量被用于访问序列中的基础元素。每次迭代，<em>declaration</em>部分的变量都会被初始化为<em>expression</em>部分的下一个元素值。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">string str(&quot;some string&quot;);
+&#x2F;&#x2F; print the characters in str one character to a line
+for (auto c : str)      &#x2F;&#x2F; for every char in str
+    cout &lt;&lt; c &lt;&lt; endl;  &#x2F;&#x2F; print the current character followed by a newline<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>计算<em>condition</em>的值之前会先执行一次<em>statement</em>，<em>condition</em>不能为空。如果<em>condition</em>的值为<code>false</code>，循环终止，否则重复执行<em>statement</em>。</p>
-<p>因为<code>do-while</code>语句先执行语句或块，再判断条件，所以不允许在条件部分定义变量。</p>
-<h2 id="跳转语句（Jump-Statements）"><a href="#跳转语句（Jump-Statements）" class="headerlink" title="跳转语句（Jump Statements）"></a>跳转语句（Jump Statements）</h2><p>跳转语句中断当前的执行过程。</p>
-<h3 id="break语句（The-break-Statement）"><a href="#break语句（The-break-Statement）" class="headerlink" title="break语句（The break Statement）"></a>break语句（The break Statement）</h3><p><code>break</code>语句只能出现在迭代语句或者<code>switch</code>语句的内部，负责终止离它最近的<code>while</code>、<code>do-while</code>、<code>for</code>或者<code>switch</code>语句，并从这些语句之后的第一条语句开始执行。</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">string buf;
-while (cin &gt;&gt; buf &amp;&amp; !buf.empty())
+<p>如果想在范围<code>for</code>语句中改变<code>string</code>对象中字符的值，必须把循环变量定义成引用类型。</p>
+<p>下标运算符接收的输入参数是<code>string::size_type</code>类型的值，表示要访问字符的位置，返回值是该位置上字符的引用。</p>
+<p>下标数值从0记起，范围是0至<em>size - 1</em>。使用超出范围的下标将引发不可预知的后果。</p>
+<p>C++标准并不要求标准库检测下标是否合法。编程时可以把下标的类型定义为相应的<code>size_type</code>，这是一种无符号数，可以确保下标不会小于0，此时代码只需要保证下标小于<code>size</code>的值就可以了。另一种确保下标合法的有效手段就是使用范围<code>for</code>语句。</p>
+<h2 id="标准库类型vector（Library-vector-Type）"><a href="#标准库类型vector（Library-vector-Type）" class="headerlink" title="标准库类型vector（Library vector Type）"></a>标准库类型vector（Library vector Type）</h2><p>标准库类型<code>vector</code>表示对象的集合，也叫做容器（container），定义在头文件<em>vector</em>中。<code>vector</code>中所有对象的类型都相同，每个对象都有一个索引与之对应并用于访问该对象。</p>
+<p><code>vector</code>是模板（template）而非类型，由<code>vector</code>生成的类型必须包含<code>vector</code>中元素的类型，如<code>vector&lt;int&gt;</code>。</p>
+<p>因为引用不是对象，所以不存在包含引用的<code>vector</code>。</p>
+<p>在早期的C++标准中，如果<code>vector</code>的元素还是<code>vector</code>，定义时必须在外层<code>vector</code>对象的右尖括号和其元素类型之间添加一个空格，如<code>vector&lt;vector&lt;int&gt; &gt;</code>。但是在C++11标准中，可以直接写成<code>vector&lt;vector&lt;int&gt;&gt;</code>，不需要添加空格。</p>
+<h3 id="定义和初始化vector对象（Defining-and-Initializing-vectors）"><a href="#定义和初始化vector对象（Defining-and-Initializing-vectors）" class="headerlink" title="定义和初始化vector对象（Defining and Initializing vectors）"></a>定义和初始化vector对象（Defining and Initializing vectors）</h3><p>初始化<code>vector</code>对象的方法：</p>
+<p><img src="Images/3-4.png" alt="3-4"></p>
+<p>初始化<code>vector</code>对象时如果使用圆括号，可以说提供的值是用来构造（construct）<code>vector</code>对象的；如果使用的是花括号，则是在列表初始化（list initialize）该<code>vector</code>对象。</p>
+<p>可以只提供<code>vector</code>对象容纳的元素数量而省略初始值，此时会创建一个值初始化（value-initialized）的元素初值，并把它赋给容器中的所有元素。这个初值由<code>vector</code>对象中的元素类型决定。</p>
+<h3 id="向vector对象中添加元素（Adding-Elements-to-a-vector）"><a href="#向vector对象中添加元素（Adding-Elements-to-a-vector）" class="headerlink" title="向vector对象中添加元素（Adding Elements to a vector）"></a>向vector对象中添加元素（Adding Elements to a vector）</h3><p><code>push_back</code>函数可以把一个值添加到<code>vector</code>的尾端。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">vector&lt;int&gt; v2;         &#x2F;&#x2F; empty vector
+for (int i &#x3D; 0; i !&#x3D; 100; ++i)
+    v2.push_back(i);    &#x2F;&#x2F; append sequential integers to v2
+&#x2F;&#x2F; at end of loop v2 has 100 elements, values 0 . . . 99<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>范围<code>for</code>语句体内不应该改变其所遍历序列的大小。</p>
+<h3 id="其他vector操作（Other-vector-Operations）"><a href="#其他vector操作（Other-vector-Operations）" class="headerlink" title="其他vector操作（Other vector Operations）"></a>其他vector操作（Other vector Operations）</h3><p><code>vector</code>支持的操作：</p>
+<p><img src="Images/3-5.png" alt="3-5"></p>
+<p><code>size</code>函数返回<code>vector</code>对象中元素的个数，返回值是由<code>vector</code>定义的<code>size_type</code>类型。<code>vector</code>对象的类型包含其中元素的类型。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">vector&lt;int&gt;::size_type  &#x2F;&#x2F; ok
+vector::size_type       &#x2F;&#x2F; error<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><code>vector</code>和<code>string</code>对象的下标运算符只能用来访问已经存在的元素，而不能用来添加元素。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">vector&lt;int&gt; ivec;   &#x2F;&#x2F; empty vector
+for (decltype(ivec.size()) ix &#x3D; 0; ix !&#x3D; 10; ++ix)
 &#123;
-    switch(buf[0])
-    &#123;
-        case &#39;-&#39;:
-            &#x2F;&#x2F; process up to the first blank
-            for (auto it &#x3D; buf.begin()+1; it !&#x3D; buf.end(); ++it)
-            &#123;
-                if (*it &#x3D;&#x3D; &#39; &#39;)
-                break;  &#x2F;&#x2F; #1, leaves the for loop
-                &#x2F;&#x2F; . . .
-            &#125;
-            &#x2F;&#x2F; break #1 transfers control here
-            &#x2F;&#x2F; remaining &#39;-&#39; processing:
-            break;  &#x2F;&#x2F; #2, leaves the switch statement
-        case &#39;+&#39;:
-    &#x2F;&#x2F; . . .
-    &#125; &#x2F;&#x2F; end switch
-&#x2F;&#x2F; end of switch: break #2 transfers control here
-&#125; &#x2F;&#x2F; end while<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    ivec[ix] &#x3D; ix;  &#x2F;&#x2F; disaster: ivec has no elements
+    ivec.push_back(ix); &#x2F;&#x2F; ok: adds a new element with value ix
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="continue语句（The-continue-Statement）"><a href="#continue语句（The-continue-Statement）" class="headerlink" title="continue语句（The continue Statement）"></a>continue语句（The continue Statement）</h3><p><code>continue</code>语句只能出现在迭代语句的内部，负责终止离它最近的循环的当前一次迭代并立即开始下一次迭代。和<code>break</code>语句不同的是，只有当<code>switch</code>语句嵌套在迭代语句内部时，才能在<code>switch</code>中使用<code>continue</code>。</p>
-<p><code>continue</code>语句中断当前迭代后，具体操作视迭代语句类型而定：</p>
+<h2 id="迭代器介绍（Introducing-Iterators）"><a href="#迭代器介绍（Introducing-Iterators）" class="headerlink" title="迭代器介绍（Introducing Iterators）"></a>迭代器介绍（Introducing Iterators）</h2><p>迭代器的作用和下标类似，但是更加通用。所有标准库容器都可以使用迭代器，但是其中只有少数几种同时支持下标运算符。</p>
+<h3 id="使用迭代器（Using-Iterators）"><a href="#使用迭代器（Using-Iterators）" class="headerlink" title="使用迭代器（Using Iterators）"></a>使用迭代器（Using Iterators）</h3><p>定义了迭代器的类型都拥有<code>begin</code>和<code>end</code>两个成员函数。<code>begin</code>函数返回指向第一个元素的迭代器，<code>end</code>函数返回指向容器“尾元素的下一位置（one past the end）”的迭代器，通常被称作尾后迭代器（off-the-end iterator）或者简称为尾迭代器（end iterator）。尾后迭代器仅是个标记，表示程序已经处理完了容器中的所有元素。迭代器一般为<code>iterator</code>类型。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F; b denotes the first element and e denotes one past the last element in ivec
+auto b &#x3D; ivec.begin(), e &#x3D; ivec.end();    &#x2F;&#x2F; b and e have the same type<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>如果容器为空，则<code>begin</code>和<code>end</code>返回的是同一个迭代器，都是尾后迭代器。</p>
+<p>标准容器迭代器的运算符：</p>
+<p><img src="Images/3-6.png" alt="3-6"></p>
+<p>因为<code>end</code>返回的迭代器并不实际指向某个元素，所以不能对其进行递增或者解引用的操作。</p>
+<p>在<code>for</code>或者其他循环语句的判断条件中，最好使用<code>!=</code>而不是<code>&lt;</code>。所有标准库容器的迭代器都定义了<code>==</code>和<code>!=</code>，但是只有其中少数同时定义了<code>&lt;</code>运算符。</p>
+<p>如果<code>vector</code>或<code>string</code>对象是常量，则只能使用<code>const_iterator</code>迭代器，该迭代器只能读元素，不能写元素。</p>
+<p><code>begin</code>和<code>end</code>返回的迭代器具体类型由对象是否是常量决定，如果对象是常量，则返回<code>const_iterator</code>；如果对象不是常量，则返回<code>iterator</code>。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">vector&lt;int&gt; v;
+const vector&lt;int&gt; cv;
+auto it1 &#x3D; v.begin();   &#x2F;&#x2F; it1 has type vector&lt;int&gt;::iterator
+auto it2 &#x3D; cv.begin();  &#x2F;&#x2F; it2 has type vector&lt;int&gt;::const_iterator<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>C++11新增了<code>cbegin</code>和<code>cend</code>函数，不论<code>vector</code>或<code>string</code>对象是否为常量，都返回<code>const_iterator</code>迭代器。</p>
+<p>任何可能改变容器对象容量的操作，都会使该对象的迭代器失效。</p>
+<h3 id="迭代器运算（Iterator-Arithmetic）"><a href="#迭代器运算（Iterator-Arithmetic）" class="headerlink" title="迭代器运算（Iterator Arithmetic）"></a>迭代器运算（Iterator Arithmetic）</h3><p><code>vector</code>和<code>string</code>迭代器支持的操作：</p>
+<p><img src="Images/3-7.png" alt="3-7"></p>
+<p><code>difference_type</code>类型用来表示两个迭代器间的距离，这是一种带符号整数类型。</p>
+<h2 id="数组（Arrays）"><a href="#数组（Arrays）" class="headerlink" title="数组（Arrays）"></a>数组（Arrays）</h2><p>数组类似<code>vector</code>，但数组的大小确定不变，不能随意向数组中添加元素。</p>
+<p>如果不清楚元素的确切个数，应该使用<code>vector</code>。</p>
+<h3 id="定义和初始化内置数组（Defining-and-Initializing-Built-in-Arrays）"><a href="#定义和初始化内置数组（Defining-and-Initializing-Built-in-Arrays）" class="headerlink" title="定义和初始化内置数组（Defining and Initializing Built-in Arrays）"></a>定义和初始化内置数组（Defining and Initializing Built-in Arrays）</h3><p>数组是一种复合类型，声明形式为<code>a[d]</code>，其中<em>a</em>是数组名称，<em>d</em>是数组维度（dimension）。维度必须是一个常量表达式。</p>
+<p>默认情况下，数组的元素被默认初始化。</p>
+<p>定义数组的时候必须指定数组的类型，不允许用<code>auto</code>关键字由初始值列表推断类型。</p>
+<p>如果定义数组时提供了元素的初始化列表，则允许省略数组维度，编译器会根据初始值的数量计算维度。但如果显式指明了维度，那么初始值的数量不能超过指定的大小。如果维度比初始值的数量大，则用提供的值初始化数组中靠前的元素，剩下的元素被默认初始化。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">const unsigned sz &#x3D; 3;
+int ia1[sz] &#x3D; &#123;0,1,2&#125;;  &#x2F;&#x2F; array of three ints with values 0, 1, 2
+int a2[] &#x3D; &#123;0, 1, 2&#125;;   &#x2F;&#x2F; an array of dimension 3
+int a3[5] &#x3D; &#123;0, 1, 2&#125;;  &#x2F;&#x2F; equivalent to a3[] &#x3D; &#123;0, 1, 2, 0, 0&#125;
+string a4[3] &#x3D; &#123;&quot;hi&quot;, &quot;bye&quot;&#125;;   &#x2F;&#x2F; same as a4[] &#x3D; &#123;&quot;hi&quot;, &quot;bye&quot;, &quot;&quot;&#125;
+int a5[2] &#x3D; &#123;0,1,2&#125;;    &#x2F;&#x2F; error: too many initializers<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>可以用字符串字面值初始化字符数组，但字符串字面值结尾处的空字符也会一起被拷贝到字符数组中。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">char a1[] &#x3D; &#123;&#39;C&#39;, &#39;+&#39;, &#39;+&#39;&#125;;        &#x2F;&#x2F; list initialization, no null
+char a2[] &#x3D; &#123;&#39;C&#39;, &#39;+&#39;, &#39;+&#39;, &#39;\0&#39;&#125;;  &#x2F;&#x2F; list initialization, explicit null
+char a3[] &#x3D; &quot;C++&quot;;      &#x2F;&#x2F; null terminator added automatically
+const char a4[6] &#x3D; &quot;Daniel&quot;;    &#x2F;&#x2F; error: no space for the null!<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>不能用一个数组初始化或直接赋值给另一个数组。</p>
+<p>从数组的名字开始由内向外阅读有助于理解复杂数组声明的含义。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">int *ptrs[10];              &#x2F;&#x2F; ptrs is an array of ten pointers to int
+int &amp;refs[10] &#x3D; &#x2F;* ? *&#x2F;;    &#x2F;&#x2F; error: no arrays of references
+int (*Parray)[10] &#x3D; &amp;arr;   &#x2F;&#x2F; Parray points to an array of ten ints
+int (&amp;arrRef)[10] &#x3D; arr;    &#x2F;&#x2F; arrRef refers to an array of ten ints<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="访问数组元素（Accessing-the-Elements-of-an-Array）"><a href="#访问数组元素（Accessing-the-Elements-of-an-Array）" class="headerlink" title="访问数组元素（Accessing the Elements of an Array）"></a>访问数组元素（Accessing the Elements of an Array）</h3><p>数组下标通常被定义成<code>size_t</code>类型，这是一种机器相关的无符号类型，可以表示内存中任意对象的大小。<code>size_t</code>定义在头文件<em>cstddef</em>中。</p>
+<p>大多数常见的安全问题都源于缓冲区溢出错误。当数组或其他类似数据结构的下标越界并试图访问非法内存区域时，就会产生此类错误。</p>
+<h3 id="指针和数组（Pointers-and-Arrays）"><a href="#指针和数组（Pointers-and-Arrays）" class="headerlink" title="指针和数组（Pointers and Arrays）"></a>指针和数组（Pointers and Arrays）</h3><p>在大多数表达式中，使用数组类型的对象其实是在使用一个指向该数组首元素的指针。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">string nums[] &#x3D; &#123;&quot;one&quot;, &quot;two&quot;, &quot;three&quot;&#125;;    &#x2F;&#x2F; array of strings
+string *p &#x3D; &amp;nums[0];   &#x2F;&#x2F; p points to the first element in nums
+string *p2 &#x3D; nums;      &#x2F;&#x2F; equivalent to p2 &#x3D; &amp;nums[0]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>一维数组寻址公式：</p>
+<p><img src="Images/3-8.png" alt="3-8"></p>
+<p>当使用数组作为一个<code>auto</code>变量的初始值时，推断得到的类型是指针而非数组。但<code>decltype</code>关键字不会发生这种转换，直接返回数组类型。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">int ia[] &#x3D; &#123;0,1,2,3,4,5,6,7,8,9&#125;;   &#x2F;&#x2F; ia is an array of ten ints
+auto ia2(ia);   &#x2F;&#x2F; ia2 is an int* that points to the first element in ia
+ia2 &#x3D; 42;       &#x2F;&#x2F; error: ia2 is a pointer, and we can&#39;t assign an int to a pointer
+auto ia2(&amp;ia[0]);   &#x2F;&#x2F; now it&#39;s clear that ia2 has type int*
+&#x2F;&#x2F; ia3 is an array of ten ints
+decltype(ia) ia3 &#x3D; &#123;0,1,2,3,4,5,6,7,8,9&#125;;
+ia3 &#x3D; p;    &#x2F;&#x2F; error: can&#39;t assign an int* to an array
+ia3[4] &#x3D; i;     &#x2F;&#x2F; ok: assigns the value of i to an element in ia3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>C++11在头文件<em>iterator</em>中定义了两个名为<code>begin</code>和<code>end</code>的函数，功能与容器中的两个同名成员函数类似，参数是一个数组。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">int ia[] &#x3D; &#123;0,1,2,3,4,5,6,7,8,9&#125;;   &#x2F;&#x2F; ia is an array of ten ints
+int *beg &#x3D; begin(ia);   &#x2F;&#x2F; pointer to the first element in ia
+int *last &#x3D; end(ia);    &#x2F;&#x2F; pointer one past the last element in ia<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>两个指针相减的结果类型是<code>ptrdiff_t</code>，这是一种定义在头文件<em>cstddef</em>中的带符号类型。</p>
+<p>标准库类型限定使用的下标必须是无符号类型，而内置的下标运算无此要求。</p>
+<h3 id="C风格字符串（C-Style-Character-Strings）"><a href="#C风格字符串（C-Style-Character-Strings）" class="headerlink" title="C风格字符串（C-Style Character Strings）"></a>C风格字符串（C-Style Character Strings）</h3><p>C风格字符串是将字符串存放在字符数组中，并以空字符结束（null terminated）。这不是一种类型，而是一种为了表达和使用字符串而形成的书写方法。</p>
+<p>C++标准支持C风格字符串，但是最好不要在C++程序中使用它们。对大多数程序来说，使用标准库<code>string</code>要比使用C风格字符串更加安全和高效。</p>
+<p>C风格字符串的函数：</p>
+<p><img src="Images/3-9.png" alt="3-9"></p>
+<p>C风格字符串函数不负责验证其参数的正确性，传入此类函数的指针必须指向以空字符作为结尾的数组。</p>
+<h3 id="与旧代码的接口（Interfacing-to-Older-Code）"><a href="#与旧代码的接口（Interfacing-to-Older-Code）" class="headerlink" title="与旧代码的接口（Interfacing to Older Code）"></a>与旧代码的接口（Interfacing to Older Code）</h3><p>任何出现字符串字面值的地方都可以用以空字符结束的字符数组来代替：</p>
 <ul>
-<li>对于<code>while</code>和<code>do-while</code>语句来说，继续判断条件的值。</li>
-<li>对于传统的<code>for</code>语句来说，继续执行<code>for</code>语句头中的第三部分，之后判断条件的值。</li>
-<li>对于范围<code>for</code>语句来说，是用序列中的下一个元素初始化循环变量。</li>
+<li>允许使用以空字符结束的字符数组来初始化<code>string</code>对象或为<code>string</code>对象赋值。</li>
+<li>在<code>string</code>对象的加法运算中，允许使用以空字符结束的字符数组作为其中一个运算对象（不能两个运算对象都是）。</li>
+<li>在<code>string</code>对象的复合赋值运算中，允许使用以空字符结束的字符数组作为右侧运算对象。</li>
 </ul>
-<h3 id="goto语句（The-goto-Statement）"><a href="#goto语句（The-goto-Statement）" class="headerlink" title="goto语句（The goto Statement）"></a>goto语句（The goto Statement）</h3><p><code>goto</code>语句（labeled statement）是一种特殊的语句，在它之前有一个标识符和一个冒号。</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">end: return; &#x2F;&#x2F; labeled statement; may be the target of a goto<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>不能用<code>string</code>对象直接初始化指向字符的指针。为了实现该功能，<code>string</code>提供了一个名为<code>c_str</code>的成员函数，返回<code>const char*</code>类型的指针，指向一个以空字符结束的字符数组，数组的数据和<code>string</code>对象一样。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">string s(&quot;Hello World&quot;);    &#x2F;&#x2F; s holds Hello World
+char *str &#x3D; s;  &#x2F;&#x2F; error: can&#39;t initialize a char* from a string
+const char *str &#x3D; s.c_str();    &#x2F;&#x2F; ok<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<p>标签标识符独立于变量和其他标识符的名字，它们之间不会相互干扰。</p>
-<p><code>goto</code>语句的形式：</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">goto label;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>针对<code>string</code>对象的后续操作有可能会让<code>c_str</code>函数之前返回的数组失去作用，如果程序想一直都能使用其返回的数组，最好将该数组重新拷贝一份。</p>
+<p>可以使用数组来初始化<code>vector</code>对象，但是需要指明要拷贝区域的首元素地址和尾后地址。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">int int_arr[] &#x3D; &#123;0, 1, 2, 3, 4, 5&#125;;
+&#x2F;&#x2F; ivec has six elements; each is a copy of the corresponding element in int_arr
+vector&lt;int&gt; ivec(begin(int_arr), end(int_arr));<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<p><code>goto</code>语句使程序无条件跳转到标签为<em>label</em>的语句处执行，但两者必须位于同一个函数内，同时<code>goto</code>语句也不能将程序的控制权从变量的作用域之外转移到作用域之内。</p>
-<p>建议不要在程序中使用<code>goto</code>语句，它使得程序既难理解又难修改。</p>
-<h2 id="try语句块和异常处理（try-Blocks-and-Exception-Handling）"><a href="#try语句块和异常处理（try-Blocks-and-Exception-Handling）" class="headerlink" title="try语句块和异常处理（try Blocks and Exception Handling）"></a>try语句块和异常处理（try Blocks and Exception Handling）</h2><p>异常（exception）是指程序运行时的反常行为，这些行为超出了函数正常功能的范围。当程序的某一部分检测到一个它无法处理的问题时，需要使用异常处理（exception handling）。</p>
-<p>异常处理机制包括<code>throw</code>表达式（throw expression）、<code>try</code>语句块（try block）和异常类（exception class）。</p>
-<ul>
-<li>异常检测部分使用<code>throw</code>表达式表示它遇到了无法处理的问题（<code>throw</code>引发了异常）。</li>
-<li>异常处理部分使用<code>try</code>语句块处理异常。<code>try</code>语句块以关键字<code>try</code>开始，并以一个或多个<code>catch</code>子句（catch clause）结束。<code>try</code>语句块中代码抛出的异常通常会被某个<code>catch</code>子句处理，<code>catch</code>子句也被称作异常处理代码（exception handler）。</li>
-<li>异常类用于在<code>throw</code>表达式和相关的<code>catch</code>子句之间传递异常的具体信息。</li>
-</ul>
-<h3 id="throw表达式（A-throw-Expression）"><a href="#throw表达式（A-throw-Expression）" class="headerlink" title="throw表达式（A throw Expression）"></a>throw表达式（A throw Expression）</h3><p><code>throw</code>表达式包含关键字<code>throw</code>和紧随其后的一个表达式，其中表达式的类型就是抛出的异常类型。</p>
-<h3 id="try语句块（The-try-Block）"><a href="#try语句块（The-try-Block）" class="headerlink" title="try语句块（The try Block）"></a>try语句块（The try Block）</h3><p><code>try</code>语句块的通用形式：</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">try
+<p>在新版本的C++程序中应该尽量使用<code>vector</code>、<code>string</code>和迭代器，避免使用内置数组、C风格字符串和指针。</p>
+<h2 id="多维数组（Multidimensional-Arrays）"><a href="#多维数组（Multidimensional-Arrays）" class="headerlink" title="多维数组（Multidimensional Arrays）"></a>多维数组（Multidimensional Arrays）</h2><p>C++中的多维数组其实就是数组的数组。当一个数组的元素仍然是数组时，通常需要用两个维度定义它：一个维度表示数组本身的大小，另一个维度表示其元素（也是数组）的大小。通常把二维数组的第一个维度称作行，第二个维度称作列。</p>
+<p>多维数组初始化的几种方式：</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">int ia[3][4] &#x3D;
+&#123;   &#x2F;&#x2F; three elements; each element is an array of size 4
+    &#123;0, 1, 2, 3&#125;,   &#x2F;&#x2F; initializers for the row indexed by 0
+    &#123;4, 5, 6, 7&#125;,   &#x2F;&#x2F; initializers for the row indexed by 1
+    &#123;8, 9, 10, 11&#125;  &#x2F;&#x2F; initializers for the row indexed by 2
+&#125;;
+&#x2F;&#x2F; equivalent initialization without the optional nested braces for each row
+int ib[3][4] &#x3D; &#123;0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11&#125;;
+&#x2F;&#x2F; explicitly initialize only element 0 in each row
+int ic[3][4] &#x3D; &#123;&#123; 0 &#125;, &#123; 4 &#125;, &#123; 8 &#125;&#125;;
+&#x2F;&#x2F; explicitly initialize row 0; the remaining elements are value initialized
+int id[3][4] &#x3D; &#123;0, 3, 6, 9&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>可以使用下标访问多维数组的元素，数组的每个维度对应一个下标运算符。如果表达式中下标运算符的数量和数组维度一样多，则表达式的结果是给定类型的元素。如果下标运算符数量比数组维度小，则表达式的结果是给定索引处的一个内层数组。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F; assigns the first element of arr to the last element in the last row of ia
+ia[2][3] &#x3D; arr[0][0][0];
+int (&amp;row)[4] &#x3D; ia[1];  &#x2F;&#x2F; binds row to the second four-element array in ia<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>多维数组寻址公式：</p>
+<p><img src="Images/3-10.png" alt="3-10"></p>
+<p>使用范围<code>for</code>语句处理多维数组时，为了避免数组被自动转换成指针，语句中的外层循环控制变量必须声明成引用类型。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">for (const auto &amp;row : ia)  &#x2F;&#x2F; for every element in the outer array
+    for (auto col : row)    &#x2F;&#x2F; for every element in the inner array
+        cout &lt;&lt; col &lt;&lt; endl;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>如果<em>row</em>不是引用类型，编译器初始化<em>row</em>时会自动将数组形式的元素转换成指向该数组内首元素的指针，这样得到的<em>row</em>就是<code>int*</code>类型，而之后的内层循环则试图在一个<code>int*</code>内遍历，程序将无法通过编译。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">for (auto row : ia)
+    for (auto col : row)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>使用范围<code>for</code>语句处理多维数组时，除了最内层的循环，其他所有外层循环的控制变量都应该定义成引用类型。</p>
+<p>因为多维数组实际上是数组的数组，所以由多维数组名称转换得到的指针指向第一个内层数组。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">int ia[3][4];       &#x2F;&#x2F; array of size 3; each element is an array of ints of size 4
+int (*p)[4] &#x3D; ia;   &#x2F;&#x2F; p points to an array of four ints
+p &#x3D; &amp;ia[2];         &#x2F;&#x2F; p now points to the last element in ia<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>声明指向数组类型的指针时，必须带有圆括号。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">int *ip[4];     &#x2F;&#x2F; array of pointers to int
+int (*ip)[4];   &#x2F;&#x2F; pointer to an array of four ints<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>使用<code>auto</code>和<code>decltype</code>能省略复杂的指针定义。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F; print the value of each element in ia, with each inner array on its own line
+&#x2F;&#x2F; p points to an array of four ints
+for (auto p &#x3D; ia; p !&#x3D; ia + 3; ++p)
 &#123;
-    program-statements
-&#125;
-catch (exception-declaration)
-&#123;
-    handler-statements
-&#125;
-catch (exception-declaration)
-&#123;
-    handler-statements
-&#125; &#x2F;&#x2F; . . .<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><code>try</code>语句块中的<em>program-statements</em>组成程序的正常逻辑，其内部声明的变量在块外无法访问，即使在<code>catch</code>子句中也不行。<code>catch</code>子句包含关键字<code>catch</code>、括号内一个对象的声明（异常声明，exception declaration）和一个块。当选中了某个<code>catch</code>子句处理异常后，执行与之对应的块。<code>catch</code>一旦完成，程序会跳过剩余的所有<code>catch</code>子句，继续执行后面的语句。</p>
-<p>如果最终没能找到与异常相匹配的<code>catch</code>子句，程序会执行名为<code>terminate</code>的标准库函数。该函数的行为与系统有关，一般情况下，执行该函数将导致程序非正常退出。类似的，如果一段程序没有<code>try</code>语句块且发生了异常，系统也会调用<code>terminate</code>函数并终止当前程序的执行。</p>
-<h3 id="标准异常（Standard-Exceptions）"><a href="#标准异常（Standard-Exceptions）" class="headerlink" title="标准异常（Standard Exceptions）"></a>标准异常（Standard Exceptions）</h3><p>异常类分别定义在4个头文件中：</p>
-<ul>
-<li><p>头文件<em>exception</em>定义了最通用的异常类<code>exception</code>。它只报告异常的发生，不提供任何额外信息。</p>
-</li>
-<li><p>头文件<em>stdexcept</em>定义了几种常用的异常类。</p>
-<p><img src="Images/5-2.png" alt="5-2"></p>
-</li>
-<li><p>头文件<em>new</em>定义了<code>bad_alloc</code>异常类。</p>
-</li>
-<li><p>头文件<em>type_info</em>定义了<code>bad_cast</code>异常类。</p>
-</li>
-</ul>
-<p>标准库异常类的继承体系：</p>
-<p><img src="Images/5-3.png" alt="5-3"></p>
-<p>只能以默认初始化的方式初始化<code>exception</code>、<code>bad_alloc</code>和<code>bad_cast</code>对象，不允许为这些对象提供初始值。其他异常类的对象在初始化时必须提供一个<code>string</code>或一个C风格字符串，通常表示异常信息。<code>what</code>成员函数可以返回该字符串的<code>string</code>副本。</p>
-
+    &#x2F;&#x2F; q points to the first element of an array of four ints; that is, q points to an int
+    for (auto q &#x3D; *p; q !&#x3D; *p + 4; ++q)
+        cout &lt;&lt; *q &lt;&lt; &#39; &#39;;
+    cout &lt;&lt; endl;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -669,7 +728,7 @@ catch (exception-declaration)
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes/di-5-zhang-yu-ju/readme/">https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes/di-5-zhang-yu-ju/readme/</a>
+                    <a href="https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes/di-03-zhang-zi-fu-chuan-xiang-liang-he-shu-zu/readme/">https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes/di-03-zhang-zi-fu-chuan-xiang-liang-he-shu-zu/readme/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -880,7 +939,7 @@ catch (exception-declaration)
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/05/02/cpp-primer-5th-notes/di-6-zhang-han-shu/readme/">
+                <a href="/2021/05/02/cpp-primer-5th-notes/di-04-zhang-biao-da-shi/readme/">
                     <div class="card-image">
                         
                         
@@ -917,7 +976,7 @@ catch (exception-declaration)
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/05/02/cpp-primer-5th-notes/di-4-zhang-biao-da-shi/readme/">
+                <a href="/2021/05/02/cpp-primer-5th-notes/di-2-zhang-bian-liang-he-ji-ben-lei-xing/readme/">
                     <div class="card-image">
                         
                         
