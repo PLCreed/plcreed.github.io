@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="typora-vue-theme主题介绍, 七日卡农">
+    <meta name="keywords" content="七日卡农">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>typora-vue-theme主题介绍 | 七日卡农</title>
+    <title>七日卡农</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/source/images/xxx.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">typora-vue-theme主题介绍</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -326,35 +326,116 @@
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/Qt/">
-                                <span class="chip bg-color">Qt</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/Qt/" class="post-category">
-                                Qt
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -363,28 +444,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-04-27
+                    2021-05-02
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-27
+                    2021-02-02
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1
+                    3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    12 分
                 </div>
                 
 
@@ -407,7 +488,172 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>.<br>as</p>
+                <h1 id="第11章-关联容器"><a href="#第11章-关联容器" class="headerlink" title="第11章 关联容器"></a>第11章 关联容器</h1><p>关联容器支持高效的关键字查找和访问操作。2个主要的关联容器（associative-container）类型是<code>map</code>和<code>set</code>。</p>
+<ul>
+<li><code>map</code>中的元素是一些键值对（key-value）：关键字起索引作用，值表示与索引相关联的数据。</li>
+<li><code>set</code>中每个元素只包含一个关键字，支持高效的关键字查询操作：检查一个给定关键字是否在<code>set</code>中。</li>
+</ul>
+<p>标准库提供了8个关联容器，它们之间的不同体现在三个方面：</p>
+<ul>
+<li>是<code>map</code>还是<code>set</code>类型。</li>
+<li>是否允许保存重复的关键字。</li>
+<li>是否按顺序保存元素。</li>
+</ul>
+<p>允许重复保存关键字的容器名字都包含单词<code>multi</code>；无序保存元素的容器名字都以单词<code>unordered</code>开头。</p>
+<p><img src="Images/11-1.png" alt="11-1"></p>
+<p><code>map</code>和<code>multimap</code>类型定义在头文件<em>map</em>中；<code>set</code>和<code>multiset</code>类型定义在头文件<em>set</em>中；无序容器定义在头文件<em>unordered_map</em>和<em>unordered_set</em>中。</p>
+<h2 id="使用关联容器（Using-an-Associative-Container）"><a href="#使用关联容器（Using-an-Associative-Container）" class="headerlink" title="使用关联容器（Using an Associative Container）"></a>使用关联容器（Using an Associative Container）</h2><p><code>map</code>类型通常被称为关联数组（associative array）。</p>
+<p>从<code>map</code>中提取一个元素时，会得到一个<code>pair</code>类型的对象。<code>pair</code>是一个模板类型，保存两个名为<code>first</code>和<code>second</code>的公有数据成员。<code>map</code>所使用的<code>pair</code>用<code>first</code>成员保存关键字，用<code>second</code>成员保存对应的值。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F; count the number of times each word occurs in the input
+map&lt;string, size_t&gt; word_count;     &#x2F;&#x2F; empty map from string to size_t
+string word;
+while (cin &gt;&gt; word)
+    ++word_count[word];     &#x2F;&#x2F; fetch and increment the counter for word
+for (const auto &amp;w : word_count)    &#x2F;&#x2F; for each element in the map
+    &#x2F;&#x2F; print the results
+    cout &lt;&lt; w.first &lt;&lt; &quot; occurs &quot; &lt;&lt; w.second
+        &lt;&lt; ((w.second &gt; 1) ? &quot; times&quot; : &quot; time&quot;) &lt;&lt; endl;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><code>set</code>类型的<code>find</code>成员返回一个迭代器。如果给定关键字在<code>set</code>中，则迭代器指向该关键字，否则返回的是尾后迭代器。</p>
+<h2 id="关联容器概述（Overview-of-the-Associative-Containers）"><a href="#关联容器概述（Overview-of-the-Associative-Containers）" class="headerlink" title="关联容器概述（Overview of the Associative Containers）"></a>关联容器概述（Overview of the Associative Containers）</h2><h3 id="定义关联容器（Defining-an-Associative-Container）"><a href="#定义关联容器（Defining-an-Associative-Container）" class="headerlink" title="定义关联容器（Defining an Associative Container）"></a>定义关联容器（Defining an Associative Container）</h3><p>定义<code>map</code>时，必须指定关键字类型和值类型；定义<code>set</code>时，只需指定关键字类型。</p>
+<p>初始化<code>map</code>时，提供的每个键值对用花括号<code>&#123;&#125;</code>包围。</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">map&lt;string, size_t&gt; word_count;   &#x2F;&#x2F; empty
+&#x2F;&#x2F; list initialization
+set&lt;string&gt; exclude &#x3D; &#123; &quot;the&quot;, &quot;but&quot;, &quot;and&quot; &#125;;
+&#x2F;&#x2F; three elements; authors maps last name to first
+map&lt;string, string&gt; authors &#x3D;
+&#123;
+    &#123;&quot;Joyce&quot;, &quot;James&quot;&#125;,
+    &#123;&quot;Austen&quot;, &quot;Jane&quot;&#125;,
+    &#123;&quot;Dickens&quot;, &quot;Charles&quot;&#125;
+&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><code>map</code>和<code>set</code>中的关键字必须唯一，<code>multimap</code>和<code>multiset</code>没有此限制。</p>
+<h3 id="关键字类型的要求（Requirements-on-Key-Type）"><a href="#关键字类型的要求（Requirements-on-Key-Type）" class="headerlink" title="关键字类型的要求（Requirements on Key Type）"></a>关键字类型的要求（Requirements on Key Type）</h3><p>对于有序容器——<code>map</code>、<code>multimap</code>、<code>set</code>和<code>multiset</code>，关键字类型必须定义元素比较的方法。默认情况下，标准库使用关键字类型的<code>&lt;</code>运算符来进行比较操作。</p>
+<p>用来组织容器元素的操作的类型也是该容器类型的一部分。如果需要使用自定义的比较操作，则必须在定义关联容器类型时提供此操作的类型。操作类型在尖括号中紧跟着元素类型给出。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">bool compareIsbn(const Sales_data &amp;lhs, const Sales_data &amp;rhs)
+&#123;
+    return lhs.isbn() &lt; rhs.isbn();
+&#125;
+
+&#x2F;&#x2F; bookstore can have several transactions with the same ISBN
+&#x2F;&#x2F; elements in bookstore will be in ISBN order
+multiset&lt;Sales_data, decltype(compareIsbn)*&gt; bookstore(compareIsbn);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="pair类型（The-pair-Type）"><a href="#pair类型（The-pair-Type）" class="headerlink" title="pair类型（The pair Type）"></a>pair类型（The pair Type）</h3><p><code>pair</code>定义在头文件<em>utility</em>中。一个<code>pair</code>可以保存两个数据成员，分别命名为<code>first</code>和<code>second</code>。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">pair&lt;string, string&gt; anon;        &#x2F;&#x2F; holds two strings
+pair&lt;string, size_t&gt; word_count;  &#x2F;&#x2F; holds a string and an size_t
+pair&lt;string, vector&lt;int&gt;&gt; line;   &#x2F;&#x2F; holds string and vector&lt;int&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p><code>pair</code>的默认构造函数对数据成员进行值初始化。</p>
+<p><code>pair</code>支持的操作：</p>
+<p><img src="Images/11-2.png" alt="11-2"></p>
+<p>在C++11中，如果函数需要返回<code>pair</code>，可以对返回值进行列表初始化。早期C++版本中必须显式构造返回值。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">pair&lt;string, int&gt; process(vector&lt;string&gt; &amp;v)
+&#123;
+    &#x2F;&#x2F; process v
+    if (!v.empty())
+        &#x2F;&#x2F; list initialize
+        return &#123; v.back(), v.back().size() &#125;;
+    else
+        &#x2F;&#x2F; explicitly constructed return value
+        return pair&lt;string, int&gt;();
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="关联容器操作（Operations-on-Associative-Containers）"><a href="#关联容器操作（Operations-on-Associative-Containers）" class="headerlink" title="关联容器操作（Operations on Associative Containers）"></a>关联容器操作（Operations on Associative Containers）</h2><p>关联容器定义了类型别名来表示容器关键字和值的类型：</p>
+<p><img src="Images/11-3.png" alt="11-3"></p>
+<p>对于<code>set</code>类型，<code>key_type</code>和<code>value_type</code>是一样的。<code>set</code>中保存的值就是关键字。对于<code>map</code>类型，元素是关键字-值对。即每个元素是一个<code>pair</code>对象，包含一个关键字和一个关联的值。由于元素关键字不能改变，因此<code>pair</code>的关键字部分是<code>const</code>的。另外，只有<code>map</code>类型（<code>unordered_map</code>、<code>unordered_multimap</code>、<code>multimap</code>、<code>map</code>）才定义了<code>mapped_type</code>。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">set&lt;string&gt;::value_type v1;        &#x2F;&#x2F; v1 is a string
+set&lt;string&gt;::key_type v2;          &#x2F;&#x2F; v2 is a string
+map&lt;string, int&gt;::value_type v3;   &#x2F;&#x2F; v3 is a pair&lt;const string, int&gt;
+map&lt;string, int&gt;::key_type v4;     &#x2F;&#x2F; v4 is a string
+map&lt;string, int&gt;::mapped_type v5;  &#x2F;&#x2F; v5 is an int<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="关联容器迭代器（Associative-Container-Iterators）"><a href="#关联容器迭代器（Associative-Container-Iterators）" class="headerlink" title="关联容器迭代器（Associative Container Iterators）"></a>关联容器迭代器（Associative Container Iterators）</h3><p>解引用关联容器迭代器时，会得到一个类型为容器的<code>value_type</code>的引用。对<code>map</code>而言，<code>value_type</code>是<code>pair</code>类型，其<code>first</code>成员保存<code>const</code>的关键字，<code>second</code>成员保存值。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F; get an iterator to an element in word_count
+auto map_it &#x3D; word_count.begin();
+&#x2F;&#x2F; *map_it is a reference to a pair&lt;const string, size_t&gt; object
+cout &lt;&lt; map_it-&gt;first;          &#x2F;&#x2F; prints the key for this element
+cout &lt;&lt; &quot; &quot; &lt;&lt; map_it-&gt;second;  &#x2F;&#x2F; prints the value of the element
+map_it-&gt;first &#x3D; &quot;new key&quot;;      &#x2F;&#x2F; error: key is const
+++map_it-&gt;second;               &#x2F;&#x2F; ok: we can change the value through an iterator<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>虽然<code>set</code>同时定义了<code>iterator</code>和<code>const_iterator</code>类型，但两种迭代器都只允许只读访问<code>set</code>中的元素。类似<code>map</code>，<code>set</code>中的关键字也是<code>const</code>的。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">set&lt;int&gt; iset &#x3D; &#123;0,1,2,3,4,5,6,7,8,9&#125;;
+set&lt;int&gt;::iterator set_it &#x3D; iset.begin();
+if (set_it !&#x3D; iset.end())
+&#123;
+    *set_it &#x3D; 42;       &#x2F;&#x2F; error: keys in a set are read-only
+    cout &lt;&lt; *set_it &lt;&lt; endl;    &#x2F;&#x2F; ok: can read the key
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><code>map</code>和<code>set</code>都支持<code>begin</code>和<code>end</code>操作。使用迭代器遍历<code>map</code>、<code>multimap</code>、<code>set</code>或<code>multiset</code>时，迭代器按关键字升序遍历元素。</p>
+<p>通常不对关联容器使用泛型算法。</p>
+<h3 id="添加元素（Adding-Elements）"><a href="#添加元素（Adding-Elements）" class="headerlink" title="添加元素（Adding Elements）"></a>添加元素（Adding Elements）</h3><p>使用<code>insert</code>成员可以向关联容器中添加元素。向<code>map</code>和<code>set</code>中添加已存在的元素对容器没有影响。</p>
+<p>通常情况下，对于想要添加到<code>map</code>中的数据，并没有现成的<code>pair</code>对象。可以直接在<code>insert</code>的参数列表中创建<code>pair</code>。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F; four ways to add word to word_count
+word_count.insert(&#123;word, 1&#125;);
+word_count.insert(make_pair(word, 1));
+word_count.insert(pair&lt;string, size_t&gt;(word, 1));
+word_count.insert(map&lt;string, size_t&gt;::value_type(word, 1));<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>关联容器的<code>insert</code>操作：</p>
+<p><img src="Images/11-4.png" alt="11-4"></p>
+<p><code>insert</code>或<code>emplace</code>的返回值依赖于容器类型和参数：</p>
+<ul>
+<li>对于不包含重复关键字的容器，添加单一元素的<code>insert</code>和<code>emplace</code>版本返回一个<code>pair</code>，表示操作是否成功。<code>pair</code>的<code>first</code>成员是一个迭代器，指向具有给定关键字的元素；<code>second</code>成员是一个<code>bool</code>值。如果关键字已在容器中，则<code>insert</code>直接返回，<code>bool</code>值为<code>false</code>。如果关键字不存在，元素会被添加至容器中，<code>bool</code>值为<code>true</code>。</li>
+<li>对于允许包含重复关键字的容器，添加单一元素的<code>insert</code>和<code>emplace</code>版本返回指向新元素的迭代器。</li>
+</ul>
+<h3 id="删除元素（Erasing-Elements）"><a href="#删除元素（Erasing-Elements）" class="headerlink" title="删除元素（Erasing Elements）"></a>删除元素（Erasing Elements）</h3><p>关联容器的删除操作：</p>
+<p><img src="Images/11-5.png" alt="11-5"></p>
+<p>与顺序容器不同，关联容器提供了一个额外的<code>erase</code>操作。它接受一个<code>key_type</code>参数，删除所有匹配给定关键字的元素（如果存在），返回实际删除的元素数量。对于不包含重复关键字的容器，<code>erase</code>的返回值总是1或0。若返回值为0，则表示想要删除的元素并不在容器中。</p>
+<h3 id="map的下标操作（Subscripting-a-map）"><a href="#map的下标操作（Subscripting-a-map）" class="headerlink" title="map的下标操作（Subscripting a map）"></a>map的下标操作（Subscripting a map）</h3><p><code>map</code>下标运算符接受一个关键字，获取与此关键字相关联的值。如果关键字不在容器中，下标运算符会向容器中添加该关键字，并值初始化关联值。</p>
+<p>由于下标运算符可能向容器中添加元素，所以只能对非<code>const</code>的<code>map</code>使用下标操作。</p>
+<p><code>map</code>和<code>unordered_map</code>的下标操作：</p>
+<p><img src="Images/11-6.png" alt="11-6"></p>
+<p>对<code>map</code>进行下标操作时，返回的是<code>mapped_type</code>类型的对象；解引用<code>map</code>迭代器时，返回的是<code>value_type</code>类型的对象。</p>
+<h3 id="访问元素（Accessing-Elements）"><a href="#访问元素（Accessing-Elements）" class="headerlink" title="访问元素（Accessing Elements）"></a>访问元素（Accessing Elements）</h3><p>关联容器的查找操作：</p>
+<p><img src="Images/11-7.png" alt="11-7"></p>
+<p>如果<code>multimap</code>或<code>multiset</code>中有多个元素具有相同关键字，则这些元素在容器中会相邻存储。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">multimap&lt;string, string&gt; authors;
+&#x2F;&#x2F; adds the first element with the key Barth, John
+authors.insert(&#123;&quot;Barth, John&quot;, &quot;Sot-Weed Factor&quot;&#125;);
+&#x2F;&#x2F; ok: adds the second element with the key Barth, John
+authors.insert(&#123;&quot;Barth, John&quot;, &quot;Lost in the Funhouse&quot;&#125;);
+
+string search_item(&quot;Alain de Botton&quot;);      &#x2F;&#x2F; author we&#39;ll look for
+auto entries &#x3D; authors.count(search_item);  &#x2F;&#x2F; number of elements
+auto iter &#x3D; authors.find(search_item);      &#x2F;&#x2F; first entry for this author
+&#x2F;&#x2F; loop through the number of entries there are for this author
+while(entries)
+&#123;
+    cout &lt;&lt; iter-&gt;second &lt;&lt; endl;   &#x2F;&#x2F; print each title
+    ++iter;      &#x2F;&#x2F; advance to the next title
+    --entries;   &#x2F;&#x2F; keep track of how many we&#39;ve printed
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><code>lower_bound</code>和<code>upper_bound</code>操作都接受一个关键字，返回一个迭代器。如果关键字在容器中，<code>lower_bound</code>返回的迭代器会指向第一个匹配给定关键字的元素，而<code>upper_bound</code>返回的迭代器则指向最后一个匹配元素之后的位置。如果关键字不在<code>multimap</code>中，则<code>lower_bound</code>和<code>upper_bound</code>会返回相等的迭代器，指向一个不影响排序的关键字插入位置。因此用相同的关键字调用<code>lower_bound</code>和<code>upper_bound</code>会得到一个迭代器范围，表示所有具有该关键字的元素范围。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F; definitions of authors and search_item as above
+&#x2F;&#x2F; beg and end denote the range of elements for this author
+for (auto beg &#x3D; authors.lower_bound(search_item),
+        end &#x3D; authors.upper_bound(search_item);
+    beg !&#x3D; end; ++beg)
+    cout &lt;&lt; beg-&gt;second &lt;&lt; endl;    &#x2F;&#x2F; print each title<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><code>lower_bound</code>和<code>upper_bound</code>有可能返回尾后迭代器。如果查找的元素具有容器中最大的关键字，则<code>upper_bound</code>返回尾后迭代器。如果关键字不存在，且大于容器中任何关键字，则<code>lower_bound</code>也返回尾后迭代器。</p>
+<p><code>equal_range</code>操作接受一个关键字，返回一个迭代器<code>pair</code>。若关键字存在，则第一个迭代器指向第一个匹配关键字的元素，第二个迭代器指向最后一个匹配元素之后的位置。若关键字不存在，则两个迭代器都指向一个不影响排序的关键字插入位置。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F; definitions of authors and search_item as above
+&#x2F;&#x2F; pos holds iterators that denote the range of elements for this key
+for (auto pos &#x3D; authors.equal_range(search_item);
+        pos.first !&#x3D; pos.second; ++pos.first)
+    cout &lt;&lt; pos.first-&gt;second &lt;&lt; endl;  &#x2F;&#x2F; print each title<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="无序容器（The-Unordered-Containers）"><a href="#无序容器（The-Unordered-Containers）" class="headerlink" title="无序容器（The Unordered Containers）"></a>无序容器（The Unordered Containers）</h2><p>新标准库定义了4个无序关联容器（unordered associative container），这些容器使用哈希函数（hash function）和关键字类型的<code>==</code>运算符组织元素。</p>
+<p>无序容器和对应的有序容器通常可以相互替换。但是由于元素未按顺序存储，使用无序容器的程序输出一般会与有序容器的版本不同。</p>
+<p>无序容器在存储上组织为一组桶，每个桶保存零或多个元素。无序容器使用一个哈希函数将元素映射到桶。为了访问一个元素，容器首先计算元素的哈希值，它指出应该搜索哪个桶。容器将具有一个特定哈希值的所有元素都保存在相同的桶中。因此无序容器的性能依赖于哈希函数的质量和桶的数量及大小。</p>
+<p>无序容器管理操作：</p>
+<p><img src="Images/11-8.png" alt="11-8"></p>
+<p>默认情况下，无序容器使用关键字类型的<code>==</code>运算符比较元素，还使用一个<code>hash&lt;key_type&gt;</code>类型的对象来生成每个元素的哈希值。标准库为内置类型和一些标准库类型提供了hash模板。因此可以直接定义关键字是这些类型的无序容器，而不能直接定义关键字类型为自定义类类型的无序容器，必须先提供对应的hash模板版本。</p>
 
                 
             </div>
@@ -434,7 +680,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.plcreed.com/2021/04/27/hello-world/">https://www.plcreed.com/2021/04/27/hello-world/</a>
+                    <a href="https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes/di-11-zhang-guan-lian-rong-qi/readme/">https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes/di-11-zhang-guan-lian-rong-qi/readme/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -471,11 +717,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/Qt/">
-                                    <span class="chip bg-color">Qt</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -649,7 +891,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/05/02/cpp-primer-5th-notes/di-1-zhang-kai-shi/readme/">
+                <a href="/2021/05/02/cpp-primer-5th-notes/di-12-zhang-dong-tai-nei-cun/readme/">
                     <div class="card-image">
                         
                         
@@ -683,47 +925,35 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/04/27/hello-world/">
+                <a href="/2021/05/02/cpp-primer-5th-notes/di-10-zhang-fan-xing-suan-fa/readme/">
                     <div class="card-image">
                         
-                        <img src="/source/images/xxx.jpg" class="responsive-img" alt="typora-vue-theme主题介绍">
                         
-                        <span class="card-title">typora-vue-theme主题介绍</span>
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-02
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Qt/" class="post-category">
-                                    Qt
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            七日卡农
                             
                         </span>
                     </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Qt/">
-                        <span class="chip bg-color">Qt</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -753,6 +983,100 @@
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
 
     
 

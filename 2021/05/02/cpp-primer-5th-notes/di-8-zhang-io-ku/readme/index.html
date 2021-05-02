@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="typora-vue-theme主题介绍, 七日卡农">
+    <meta name="keywords" content="七日卡农">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>typora-vue-theme主题介绍 | 七日卡农</title>
+    <title>七日卡农</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/source/images/xxx.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">typora-vue-theme主题介绍</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -326,35 +326,116 @@
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/Qt/">
-                                <span class="chip bg-color">Qt</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/Qt/" class="post-category">
-                                Qt
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -363,28 +444,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-04-27
+                    2021-05-02
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-27
+                    2021-02-02
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1
+                    2.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    11 分
                 </div>
                 
 
@@ -407,8 +488,148 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>.<br>as</p>
+                <h1 id="第8章-IO库"><a href="#第8章-IO库" class="headerlink" title="第8章 IO库"></a>第8章 IO库</h1><p>部分IO库设施：</p>
+<ul>
+<li><code>istream</code>：输入流类型，提供输入操作。</li>
+<li><code>ostream</code>：输出流类型，提供输出操作。</li>
+<li><code>cin</code>：<code>istream</code>对象，从标准输入读取数据。</li>
+<li><code>cout</code>：<code>ostream</code>对象，向标准输出写入数据。</li>
+<li><code>cerr</code>：<code>ostream</code>对象，向标准错误写入数据。</li>
+<li><code>&gt;&gt;</code>运算符：从<code>istream</code>对象读取输入数据。</li>
+<li><code>&lt;&lt;</code>运算符：向<code>ostream</code>对象写入输出数据。</li>
+<li><code>getline</code>函数：从<code>istream</code>对象读取一行数据，写入<code>string</code>对象。</li>
+</ul>
+<h2 id="IO类（The-IO-Classes）"><a href="#IO类（The-IO-Classes）" class="headerlink" title="IO类（The IO Classes）"></a>IO类（The IO Classes）</h2><p>头文件<em>iostream</em>定义了用于读写流的基本类型，<em>fstream</em>定义了读写命名文件的类型，<em>sstream</em>定义了读写内存中<code>string</code>对象的类型。</p>
+<p><img src="Images/8-1.png" alt="8-1"></p>
+<p>宽字符版本的IO类型和函数的名字以<code>w</code>开始，如<code>wcin</code>、<code>wcout</code>和<code>wcerr</code>分别对应<code>cin</code>、<code>cout</code>和<code>cerr</code>。它们与其对应的普通<code>char</code>版本都定义在同一个头文件中，如头文件<em>fstream</em>定义了<code>ifstream</code>和<code>wifstream</code>类型。</p>
+<p>可以将派生类的对象当作其基类的对象使用。</p>
+<h3 id="IO象无拷贝或赋值（No-Copy-or-Assign-for-IO-Objects）"><a href="#IO象无拷贝或赋值（No-Copy-or-Assign-for-IO-Objects）" class="headerlink" title="IO象无拷贝或赋值（No Copy or Assign for IO Objects）"></a>IO象无拷贝或赋值（No Copy or Assign for IO Objects）</h3><p>不能拷贝或对IO对象赋值。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">ofstream out1, out2;
+out1 &#x3D; out2;    &#x2F;&#x2F; error: cannot assign stream objects
+ofstream print(ofstream);   &#x2F;&#x2F; error: can&#39;t initialize the ofstream parameter
+out2 &#x3D; print(out2);     &#x2F;&#x2F; error: cannot copy stream objects<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
+<p>由于IO对象不能拷贝，因此不能将函数形参或返回类型定义为流类型。进行IO操作的函数通常以引用方式传递和返回流。读写一个IO对象会改变其状态，因此传递和返回的引用不能是<code>const</code>的。</p>
+<h3 id="条件状态（Condition-States）"><a href="#条件状态（Condition-States）" class="headerlink" title="条件状态（Condition States）"></a>条件状态（Condition States）</h3><p>IO库条件状态：</p>
+<p><img src="Images/8-2.png" alt="8-2"></p>
+<p><code>badbit</code>表示系统级错误，如不可恢复的读写错误。通常情况下，一旦<code>badbit</code>被置位，流就无法继续使用了。在发生可恢复错误后，<code>failbit</code>会被置位，如期望读取数值却读出一个字符。如果到达文件结束位置，<code>eofbit</code>和<code>failbit</code>都会被置位。如果流未发生错误，则<code>goodbit</code>的值为0。如果<code>badbit</code>、<code>failbit</code>和<code>eofbit</code>任何一个被置位，检测流状态的条件都会失败。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">while (cin &gt;&gt; word)
+    &#x2F;&#x2F; ok: read operation successful...<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><code>good</code>函数在所有错误均未置位时返回<code>true</code>。而<code>bad</code>、<code>fail</code>和<code>eof</code>函数在对应错误位被置位时返回<code>true</code>。此外，在<code>badbit</code>被置位时，<code>fail</code>函数也会返回<code>true</code>。因此应该使用<code>good</code>或<code>fail</code>函数确定流的总体状态，<code>eof</code>和<code>bad</code>只能检测特定错误。</p>
+<p>流对象的<code>rdstate</code>成员返回一个<code>iostate</code>值，表示流的当前状态。<code>setstate</code>成员用于将指定条件置位（叠加原始流状态）。<code>clear</code>成员的无参版本清除所有错误标志；含参版本接受一个<code>iostate</code>值，用于设置流的新状态（覆盖原始流状态）。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F; remember the current state of cin
+auto old_state &#x3D; cin.rdstate();     &#x2F;&#x2F; remember the current state of cin
+cin.clear();    &#x2F;&#x2F; make cin valid
+process_input(cin);     &#x2F;&#x2F; use cin
+cin.setstate(old_state);    &#x2F;&#x2F; now reset cin to its old state<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="管理输出缓冲（Managing-the-Output-Buffer）"><a href="#管理输出缓冲（Managing-the-Output-Buffer）" class="headerlink" title="管理输出缓冲（Managing the Output Buffer）"></a>管理输出缓冲（Managing the Output Buffer）</h3><p>每个输出流都管理一个缓冲区，用于保存程序读写的数据。导致缓冲刷新（即数据真正写入输出设备或文件）的原因有很多：</p>
+<ul>
+<li>程序正常结束。</li>
+<li>缓冲区已满。</li>
+<li>使用操纵符（如<code>endl</code>）显式刷新缓冲区。</li>
+<li>在每个输出操作之后，可以用<code>unitbuf</code>操纵符设置流的内部状态，从而清空缓冲区。默认情况下，对<code>cerr</code>是设置<code>unitbuf</code>的，因此写到<code>cerr</code>的内容都是立即刷新的。</li>
+<li>一个输出流可以被关联到另一个流。这种情况下，当读写被关联的流时，关联到的流的缓冲区会被刷新。默认情况下，<code>cin</code>和<code>cerr</code>都关联到<code>cout</code>，因此，读<code>cin</code>或写<code>cerr</code>都会刷新<code>cout</code>的缓冲区。</li>
+</ul>
+<p><code>flush</code>操纵符刷新缓冲区，但不输出任何额外字符。<code>ends</code>向缓冲区插入一个空字符，然后刷新缓冲区。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">cout &lt;&lt; &quot;hi!&quot; &lt;&lt; endl;   &#x2F;&#x2F; writes hi and a newline, then flushes the buffer
+cout &lt;&lt; &quot;hi!&quot; &lt;&lt; flush;  &#x2F;&#x2F; writes hi, then flushes the buffer; adds no data
+cout &lt;&lt; &quot;hi!&quot; &lt;&lt; ends;   &#x2F;&#x2F; writes hi and a null, then flushes the buffer<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>如果想在每次输出操作后都刷新缓冲区，可以使用<code>unitbuf</code>操纵符。它令流在接下来的每次写操作后都进行一次<code>flush</code>操作。而<code>nounitbuf</code>操纵符则使流恢复使用正常的缓冲区刷新机制。</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">cout &lt;&lt; unitbuf;    &#x2F;&#x2F; all writes will be flushed immediately
+&#x2F;&#x2F; any output is flushed immediately, no buffering
+cout &lt;&lt; nounitbuf;  &#x2F;&#x2F; returns to normal buffering<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>如果程序异常终止，输出缓冲区不会被刷新。</p>
+<p>当一个输入流被关联到一个输出流时，任何试图从输入流读取数据的操作都会先刷新关联的输出流。标准库将<code>cout</code>和<code>cin</code>关联在一起，因此下面的语句会导致<code>cout</code>的缓冲区被刷新：</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">cin &gt;&gt; ival;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>交互式系统通常应该关联输入流和输出流。这意味着包括用户提示信息在内的所有输出，都会在读操作之前被打印出来。</p>
+<p>使用<code>tie</code>函数可以关联两个流。它有两个重载版本：无参版本返回指向输出流的指针。如果本对象已关联到一个输出流，则返回的就是指向这个流的指针，否则返回空指针。<code>tie</code>的第二个版本接受一个指向<code>ostream</code>的指针，将本对象关联到此<code>ostream</code>。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">cin.tie(&amp;cout);     &#x2F;&#x2F; illustration only: the library ties cin and cout for us
+&#x2F;&#x2F; old_tie points to the stream (if any) currently tied to cin
+ostream *old_tie &#x3D; cin.tie(nullptr); &#x2F;&#x2F; cin is no longer tied
+&#x2F;&#x2F; ties cin and cerr; not a good idea because cin should be tied to cout
+cin.tie(&amp;cerr);     &#x2F;&#x2F; reading cin flushes cerr, not cout
+cin.tie(old_tie);   &#x2F;&#x2F; reestablish normal tie between cin and cout<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>每个流同时最多关联一个流，但多个流可以同时关联同一个<code>ostream</code>。向<code>tie</code>传递空指针可以解开流的关联。</p>
+<h2 id="文件输入输出（File-Input-and-Output）"><a href="#文件输入输出（File-Input-and-Output）" class="headerlink" title="文件输入输出（File Input and Output）"></a>文件输入输出（File Input and Output）</h2><p>头文件<em>fstream</em>定义了三个类型来支持文件IO：<code>ifstream</code>从给定文件读取数据，<code>ofstream</code>向指定文件写入数据，<code>fstream</code>可以同时读写指定文件。</p>
+<p><img src="Images/8-3.png" alt="8-3"></p>
+<h3 id="使用文件流对象（Using-File-Stream-Objects）"><a href="#使用文件流对象（Using-File-Stream-Objects）" class="headerlink" title="使用文件流对象（Using File Stream Objects）"></a>使用文件流对象（Using File Stream Objects）</h3><p>每个文件流类型都定义了<code>open</code>函数，它完成一些系统操作，定位指定文件，并视情况打开为读或写模式。</p>
+<p>创建文件流对象时，如果提供了文件名（可选），<code>open</code>会被自动调用。</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">ifstream in(ifile);   &#x2F;&#x2F; construct an ifstream and open the given file
+ofstream out;   &#x2F;&#x2F; output file stream that is not associated with any file<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>在C++11中，文件流对象的文件名可以是<code>string</code>对象或C风格字符数组。旧版本的标准库只支持C风格字符数组。</p>
+<p>在要求使用基类对象的地方，可以用继承类型的对象代替。因此一个接受<code>iostream</code>类型引用或指针参数的函数，可以用对应的<code>fstream</code>类型来调用。</p>
+<p>可以先定义空文件流对象，再调用<code>open</code>函数将其与指定文件关联。如果<code>open</code>调用失败，<code>failbit</code>会被置位。</p>
+<p>对一个已经打开的文件流调用<code>open</code>会失败，并导致<code>failbit</code>被置位。随后试图使用文件流的操作都会失败。如果想将文件流关联到另一个文件，必须先调用<code>close</code>关闭当前文件，再调用<code>clear</code>重置流的条件状态（<code>close</code>不会重置流的条件状态）。</p>
+<p>当<code>fstream</code>对象被销毁时，<code>close</code>会自动被调用。</p>
+<h3 id="文件模式（File-Modes）"><a href="#文件模式（File-Modes）" class="headerlink" title="文件模式（File Modes）"></a>文件模式（File Modes）</h3><p>每个流都有一个关联的文件模式，用来指出如何使用文件。</p>
+<p><img src="Images/8-4.png" alt="8-4"></p>
+<ul>
+<li>只能对<code>ofstream</code>或<code>fstream</code>对象设定<code>out</code>模式。</li>
+<li>只能对<code>ifstream</code>或<code>fstream</code>对象设定<code>in</code>模式。</li>
+<li>只有当<code>out</code>被设定时才能设定<code>trunc</code>模式。</li>
+<li>只要<code>trunc</code>没被设定，就能设定<code>app</code>模式。在<code>app</code>模式下，即使没有设定<code>out</code>模式，文件也是以输出方式打开。</li>
+<li>默认情况下，即使没有设定<code>trunc</code>，以<code>out</code>模式打开的文件也会被截断。如果想保留以<code>out</code>模式打开的文件内容，就必须同时设定<code>app</code>模式，这会将数据追加写到文件末尾；或者同时设定<code>in</code>模式，即同时进行读写操作。</li>
+<li><code>ate</code>和<code>binary</code>模式可用于任何类型的文件流对象，并可以和其他任何模式组合使用。</li>
+<li>与<code>ifstream</code>对象关联的文件默认以<code>in</code>模式打开，与<code>ofstream</code>对象关联的文件默认以<code>out</code>模式打开，与<code>fstream</code>对象关联的文件默认以<code>in</code>和<code>out</code>模式打开。</li>
+</ul>
+<p>默认情况下，打开<code>ofstream</code>对象时，文件内容会被丢弃，阻止文件清空的方法是同时指定<code>app</code>或<code>in</code>模式。</p>
+<p>流对象每次打开文件时都可以改变其文件模式。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">ofstream out;   &#x2F;&#x2F; no file mode is set
+out.open(&quot;scratchpad&quot;);    &#x2F;&#x2F; mode implicitly out and trunc
+out.close();    &#x2F;&#x2F; close out so we can use it for a different file
+out.open(&quot;precious&quot;, ofstream::app);   &#x2F;&#x2F; mode is out and app
+out.close();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="string流（string-Streams）"><a href="#string流（string-Streams）" class="headerlink" title="string流（string Streams）"></a>string流（string Streams）</h2><p>头文件<em>sstream</em>定义了三个类型来支持内存IO：<code>istringstream</code>从<code>string</code>读取数据，<code>ostringstream</code>向<code>string</code>写入数据，<code>stringstream</code>可以同时读写<code>string</code>的数据。</p>
+<p><img src="Images/8-5.png" alt="8-5"></p>
+<h3 id="使用istringstream（Using-an-istringstream）"><a href="#使用istringstream（Using-an-istringstream）" class="headerlink" title="使用istringstream（Using an istringstream）"></a>使用istringstream（Using an istringstream）</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F; members are public by default
+struct PersonInfo
+&#123;
+    string name;
+    vector&lt;string&gt; phones;
+&#125;;
+
+string line, word;   &#x2F;&#x2F; will hold a line and word from input, respectively
+vector&lt;PersonInfo&gt; people;    &#x2F;&#x2F; will hold all the records from the input
+&#x2F;&#x2F; read the input a line at a time until cin hits end-of-file (or another error)
+while (getline(cin, line))
+&#123;
+    PersonInfo info;    &#x2F;&#x2F; create an object to hold this record&#39;s data
+    istringstream record(line);    &#x2F;&#x2F; bind record to the line we just read
+    record &gt;&gt; info.name;    &#x2F;&#x2F; read the name
+    while (record &gt;&gt; word)  &#x2F;&#x2F; read the phone numbers
+        info.phones.push_back(word);   &#x2F;&#x2F; and store them
+    people.push_back(info);    &#x2F;&#x2F; append this record to people
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="使用ostringstream（Using-ostringstreams）"><a href="#使用ostringstream（Using-ostringstreams）" class="headerlink" title="使用ostringstream（Using ostringstreams）"></a>使用ostringstream（Using ostringstreams）</h3><pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">for (const auto &amp;entry : people)
+&#123; &#x2F;&#x2F; for each entry in people
+    ostringstream formatted, badNums;   &#x2F;&#x2F; objects created on each loop
+    for (const auto &amp;nums : entry.phones)
+    &#123; &#x2F;&#x2F; for each number
+        if (!valid(nums))
+        &#123;
+            badNums &lt;&lt; &quot; &quot; &lt;&lt; nums;  &#x2F;&#x2F; string in badNums
+        &#125;
+        else
+            &#x2F;&#x2F; &#39;&#39;writes&#39;&#39; to formatted&#39;s string
+            formatted &lt;&lt; &quot; &quot; &lt;&lt; format(nums);
+    &#125;
+
+    if (badNums.str().empty())   &#x2F;&#x2F; there were no bad numbers
+        os &lt;&lt; entry.name &lt;&lt; &quot; &quot;  &#x2F;&#x2F; print the name
+            &lt;&lt; formatted.str() &lt;&lt; endl;   &#x2F;&#x2F; and reformatted numbers
+    else  &#x2F;&#x2F; otherwise, print the name and bad numbers
+        cerr &lt;&lt; &quot;input error: &quot; &lt;&lt; entry.name
+            &lt;&lt; &quot; invalid number(s) &quot; &lt;&lt; badNums.str() &lt;&lt; endl;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -434,7 +655,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.plcreed.com/2021/04/27/hello-world/">https://www.plcreed.com/2021/04/27/hello-world/</a>
+                    <a href="https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes/di-8-zhang-io-ku/readme/">https://www.plcreed.com/2021/05/02/cpp-primer-5th-notes/di-8-zhang-io-ku/readme/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -471,11 +692,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/Qt/">
-                                    <span class="chip bg-color">Qt</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -649,7 +866,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/05/02/cpp-primer-5th-notes/di-1-zhang-kai-shi/readme/">
+                <a href="/2021/05/02/cpp-primer-5th-notes/di-9-zhang-shun-xu-rong-qi/readme/">
                     <div class="card-image">
                         
                         
@@ -683,47 +900,35 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/04/27/hello-world/">
+                <a href="/2021/05/02/cpp-primer-5th-notes/di-7-zhang-lei/readme/">
                     <div class="card-image">
                         
-                        <img src="/source/images/xxx.jpg" class="responsive-img" alt="typora-vue-theme主题介绍">
                         
-                        <span class="card-title">typora-vue-theme主题介绍</span>
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-02
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Qt/" class="post-category">
-                                    Qt
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            七日卡农
                             
                         </span>
                     </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Qt/">
-                        <span class="chip bg-color">Qt</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -753,6 +958,100 @@
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
 
     
 
