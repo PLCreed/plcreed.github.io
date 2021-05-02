@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="七日卡农">
+    <meta name="keywords" content="第05章 语句, 七日卡农">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>七日卡农</title>
+    <title>第05章 语句 | 七日卡农</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">第05章 语句</h1>
                 </div>
             </div>
         </div>
@@ -326,116 +326,35 @@
 
 
 
-<main class="post-container content">
+<main class="container content">
 
     
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
-<style>
-    #articleContent h1::before,
-    #articleContent h2::before,
-    #articleContent h3::before,
-    #articleContent h4::before,
-    #articleContent h5::before,
-    #articleContent h6::before {
-        display: block;
-        content: " ";
-        height: 100px;
-        margin-top: -100px;
-        visibility: hidden;
-    }
-
-    #articleContent :focus {
-        outline: none;
-    }
-
-    .toc-fixed {
-        position: fixed;
-        top: 64px;
-    }
-
-    .toc-widget {
-        width: 345px;
-        padding-left: 20px;
-    }
-
-    .toc-widget .toc-title {
-        padding: 35px 0 15px 17px;
-        font-size: 1.5rem;
-        font-weight: bold;
-        line-height: 1.5rem;
-    }
-
-    .toc-widget ol {
-        padding: 0;
-        list-style: none;
-    }
-
-    #toc-content {
-        padding-bottom: 30px;
-        overflow: auto;
-    }
-
-    #toc-content ol {
-        padding-left: 10px;
-    }
-
-    #toc-content ol li {
-        padding-left: 10px;
-    }
-
-    #toc-content .toc-link:hover {
-        color: #42b983;
-        font-weight: 700;
-        text-decoration: underline;
-    }
-
-    #toc-content .toc-link::before {
-        background-color: transparent;
-        max-height: 25px;
-
-        position: absolute;
-        right: 23.5vw;
-        display: block;
-    }
-
-    #toc-content .is-active-link {
-        color: #42b983;
-    }
-
-    #floating-toc-btn {
-        position: fixed;
-        right: 15px;
-        bottom: 76px;
-        padding-top: 15px;
-        margin-bottom: 0;
-        z-index: 998;
-    }
-
-    #floating-toc-btn .btn-floating {
-        width: 48px;
-        height: 48px;
-    }
-
-    #floating-toc-btn .btn-floating i {
-        line-height: 48px;
-        font-size: 1.4rem;
-    }
-</style>
-<div class="row">
-    <div id="main-content" class="col s12 m12 l9">
-        <!-- 文章内容详情 -->
+    <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/C-Primer-5th/">
+                                <span class="chip bg-color">C++ Primer 5th</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/C-Primer-5th/" class="post-category">
+                                C++ Primer 5th
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -524,7 +443,7 @@ else
 </ul>
 <p><code>if</code>语句可以嵌套，其中<code>else</code>与离它最近的尚未匹配的<code>if</code>相匹配。</p>
 <h3 id="switch语句（The-switch-Statement）"><a href="#switch语句（The-switch-Statement）" class="headerlink" title="switch语句（The switch Statement）"></a>switch语句（The switch Statement）</h3><p><code>switch</code>语句的形式：</p>
-<p><img src="Images/5-1.png" alt="5-1"></p>
+<p><img src="/2021/05/02/cpp-primer-5th-notes/di-05-zhang-yu-ju/readme/5-1.png" alt="5-1"></p>
 <p><code>switch</code>语句先对括号里的表达式求值，值转换成整数类型后再与每个<code>case</code>标签（case label）的值进行比较。如果表达式的值和某个<code>case</code>标签匹配，程序从该标签之后的第一条语句开始执行，直到到达<code>switch</code>的结尾或者遇到<code>break</code>语句为止。<code>case</code>标签必须是整型常量表达式。</p>
 <p>通常情况下每个<code>case</code>分支后都有<code>break</code>语句。如果确实不应该出现<code>break</code>语句，最好写一段注释说明程序的逻辑。</p>
 <p>尽管<code>switch</code>语句没有强制要求在最后一个<code>case</code>标签后写上<code>break</code>，但为了安全起见，最好添加<code>break</code>。这样即使以后增加了新的<code>case</code>分支，也不用再在前面补充<code>break</code>语句了。</p>
@@ -633,7 +552,7 @@ catch (exception-declaration)
 <li><p>头文件<em>exception</em>定义了最通用的异常类<code>exception</code>。它只报告异常的发生，不提供任何额外信息。</p>
 </li>
 <li><p>头文件<em>stdexcept</em>定义了几种常用的异常类。</p>
-<p><img src="Images/5-2.png" alt="5-2"></p>
+<p><img src="/2021/05/02/cpp-primer-5th-notes/di-05-zhang-yu-ju/readme/5-2.png" alt="5-2"></p>
 </li>
 <li><p>头文件<em>new</em>定义了<code>bad_alloc</code>异常类。</p>
 </li>
@@ -641,7 +560,7 @@ catch (exception-declaration)
 </li>
 </ul>
 <p>标准库异常类的继承体系：</p>
-<p><img src="Images/5-3.png" alt="5-3"></p>
+<p><img src="/2021/05/02/cpp-primer-5th-notes/di-05-zhang-yu-ju/readme/5-3.png" alt="5-3"></p>
 <p>只能以默认初始化的方式初始化<code>exception</code>、<code>bad_alloc</code>和<code>bad_cast</code>对象，不允许为这些对象提供初始值。其他异常类的对象在初始化时必须提供一个<code>string</code>或一个C风格字符串，通常表示异常信息。<code>what</code>成员函数可以返回该字符串的<code>string</code>副本。</p>
 
                 
@@ -706,7 +625,11 @@ catch (exception-declaration)
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/C-Primer-5th/">
+                                    <span class="chip bg-color">C++ Primer 5th</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -884,9 +807,9 @@ catch (exception-declaration)
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="第06章 函数">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">第06章 函数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -901,11 +824,23 @@ catch (exception-declaration)
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            七日卡农
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/C-Primer-5th/" class="post-category">
+                                    C++ Primer 5th
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/C-Primer-5th/">
+                        <span class="chip bg-color">C++ Primer 5th</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -921,9 +856,9 @@ catch (exception-declaration)
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="第04章 表达式">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">第04章 表达式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -938,11 +873,23 @@ catch (exception-declaration)
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            七日卡农
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/C-Primer-5th/" class="post-category">
+                                    C++ Primer 5th
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/C-Primer-5th/">
+                        <span class="chip bg-color">C++ Primer 5th</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -972,100 +919,6 @@ catch (exception-declaration)
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
-
-    </div>
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
-            <div id="toc-content"></div>
-        </div>
-    </div>
-</div>
-
-<!-- TOC 悬浮按钮. -->
-
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fas fa-list-ul"></i>
-    </a>
-</div>
-
-
-<script src="/libs/tocbot/tocbot.min.js"></script>
-<script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
-        });
-
-        // modify the toc link href to support Chinese.
-        let i = 0;
-        let tocHeading = 'toc-heading-';
-        $('#toc-content a').each(function () {
-            $(this).attr('href', '#' + tocHeading + (++i));
-        });
-
-        // modify the heading title id to support Chinese.
-        i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
-            $(this).attr('id', tocHeading + (++i));
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).hide();
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).show();
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
-        
-    });
-</script>
 
     
 

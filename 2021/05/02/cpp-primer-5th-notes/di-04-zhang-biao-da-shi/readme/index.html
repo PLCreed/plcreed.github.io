@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="七日卡农">
+    <meta name="keywords" content="第04章 表达式, 七日卡农">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>七日卡农</title>
+    <title>第04章 表达式 | 七日卡农</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">第04章 表达式</h1>
                 </div>
             </div>
         </div>
@@ -326,116 +326,35 @@
 
 
 
-<main class="post-container content">
+<main class="container content">
 
     
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
-<style>
-    #articleContent h1::before,
-    #articleContent h2::before,
-    #articleContent h3::before,
-    #articleContent h4::before,
-    #articleContent h5::before,
-    #articleContent h6::before {
-        display: block;
-        content: " ";
-        height: 100px;
-        margin-top: -100px;
-        visibility: hidden;
-    }
-
-    #articleContent :focus {
-        outline: none;
-    }
-
-    .toc-fixed {
-        position: fixed;
-        top: 64px;
-    }
-
-    .toc-widget {
-        width: 345px;
-        padding-left: 20px;
-    }
-
-    .toc-widget .toc-title {
-        padding: 35px 0 15px 17px;
-        font-size: 1.5rem;
-        font-weight: bold;
-        line-height: 1.5rem;
-    }
-
-    .toc-widget ol {
-        padding: 0;
-        list-style: none;
-    }
-
-    #toc-content {
-        padding-bottom: 30px;
-        overflow: auto;
-    }
-
-    #toc-content ol {
-        padding-left: 10px;
-    }
-
-    #toc-content ol li {
-        padding-left: 10px;
-    }
-
-    #toc-content .toc-link:hover {
-        color: #42b983;
-        font-weight: 700;
-        text-decoration: underline;
-    }
-
-    #toc-content .toc-link::before {
-        background-color: transparent;
-        max-height: 25px;
-
-        position: absolute;
-        right: 23.5vw;
-        display: block;
-    }
-
-    #toc-content .is-active-link {
-        color: #42b983;
-    }
-
-    #floating-toc-btn {
-        position: fixed;
-        right: 15px;
-        bottom: 76px;
-        padding-top: 15px;
-        margin-bottom: 0;
-        z-index: 998;
-    }
-
-    #floating-toc-btn .btn-floating {
-        width: 48px;
-        height: 48px;
-    }
-
-    #floating-toc-btn .btn-floating i {
-        line-height: 48px;
-        font-size: 1.4rem;
-    }
-</style>
-<div class="row">
-    <div id="main-content" class="col s12 m12 l9">
-        <!-- 文章内容详情 -->
+    <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/C-Primer-5th/">
+                                <span class="chip bg-color">C++ Primer 5th</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/C-Primer-5th/" class="post-category">
+                                C++ Primer 5th
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -513,10 +432,10 @@ cout &lt;&lt; i &lt;&lt; &quot; &quot; &lt;&lt; ++i &lt;&lt; endl;    &#x2F;&#x2
 </ul>
 <p>当改变运算对象的子表达式本身就是另一个子表达式的运算对象时，第二条规则无效。如<code>*++iter</code>，递增运算符改变了<em>iter</em>的值，而改变后的<em>iter</em>又是解引用运算符的运算对象。类似情况下，求值的顺序不会成为问题。</p>
 <h2 id="算术运算符（Arithmetic-Operators）"><a href="#算术运算符（Arithmetic-Operators）" class="headerlink" title="算术运算符（Arithmetic Operators）"></a>算术运算符（Arithmetic Operators）</h2><p>算术运算符（左结合律）：</p>
-<p><img src="Images/4-1.png" alt="4-1"></p>
+<p><img src="/2021/05/02/cpp-primer-5th-notes/di-04-zhang-biao-da-shi/readme/4-1.png" alt="4-1"></p>
 <p>在除法运算中，C++语言的早期版本允许结果为负数的商向上或向下取整，C++11新标准则规定商一律向0取整（即直接去除小数部分）。</p>
 <h2 id="逻辑和关系运算符（Logical-and-Relational-Operators）"><a href="#逻辑和关系运算符（Logical-and-Relational-Operators）" class="headerlink" title="逻辑和关系运算符（Logical and Relational Operators）"></a>逻辑和关系运算符（Logical and Relational Operators）</h2><p>关系运算符作用于算术类型和指针类型，逻辑运算符作用于任意能转换成布尔值的类型。逻辑运算符和关系运算符的返回值都是布尔类型。</p>
-<p><img src="Images/4-2.png" alt="4-2"></p>
+<p><img src="/2021/05/02/cpp-primer-5th-notes/di-04-zhang-biao-da-shi/readme/4-2.png" alt="4-2"></p>
 <p>逻辑与（logical AND）运算符<code>&amp;&amp;</code>和逻辑或（logical OR）运算符<code>||</code>都是先计算左侧运算对象的值再计算右侧运算对象的值，当且仅当左侧运算对象无法确定表达式的结果时才会去计算右侧运算对象的值。这种策略称为短路求值（short-circuit evaluation）。</p>
 <ul>
 <li>对于逻辑与运算符来说，当且仅当左侧运算对象为真时才对右侧运算对象求值。</li>
@@ -563,7 +482,7 @@ n &#x3D; p-&gt;size();      &#x2F;&#x2F; equivalent to (*p).size()<span aria-hid
 <p>条件运算符可以嵌套，但是考虑到代码的可读性，运算的嵌套层数最好不要超过两到三层。</p>
 <p>条件运算符的优先级非常低，因此当一个长表达式中嵌套了条件运算子表达式时，通常需要在它两端加上括号。</p>
 <h2 id="位运算符（The-Bitwise-Operators）"><a href="#位运算符（The-Bitwise-Operators）" class="headerlink" title="位运算符（The Bitwise Operators）"></a>位运算符（The Bitwise Operators）</h2><p>位运算符（左结合律）：</p>
-<p><img src="Images/4-3.png" alt="4-3"></p>
+<p><img src="/2021/05/02/cpp-primer-5th-notes/di-04-zhang-biao-da-shi/readme/4-3.png" alt="4-3"></p>
 <p>在位运算中符号位如何处理并没有明确的规定，所以建议仅将位运算符用于无符号类型的处理。</p>
 <p>左移运算符<code>&lt;&lt;</code>在运算对象右侧插入值为0的二进制位。右移运算符<code>&gt;&gt;</code>的行为依赖于其左侧运算对象的类型：如果该运算对象是无符号类型，在其左侧插入值为0的二进制位；如果是带符号类型，在其左侧插入符号位的副本或者值为0的二进制位，如何选择视具体环境而定。</p>
 <h2 id="sizeof运算符（The-sizeof-Operator）"><a href="#sizeof运算符（The-sizeof-Operator）" class="headerlink" title="sizeof运算符（The sizeof Operator）"></a>sizeof运算符（The sizeof Operator）</h2><p><code>sizeof</code>运算符返回一个表达式或一个类型名字所占的字节数，返回值是<code>size_t</code>类型。</p>
@@ -666,7 +585,11 @@ for(vector&lt;int&gt;::size_type ix &#x3D; 0; ix !&#x3D; ivec.size(); ++ix, --cn
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/C-Primer-5th/">
+                                    <span class="chip bg-color">C++ Primer 5th</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -844,9 +767,9 @@ for(vector&lt;int&gt;::size_type ix &#x3D; 0; ix !&#x3D; ivec.size(); ++ix, --cn
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="第05章 语句">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">第05章 语句</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -861,11 +784,23 @@ for(vector&lt;int&gt;::size_type ix &#x3D; 0; ix !&#x3D; ivec.size(); ++ix, --cn
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            七日卡农
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/C-Primer-5th/" class="post-category">
+                                    C++ Primer 5th
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/C-Primer-5th/">
+                        <span class="chip bg-color">C++ Primer 5th</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -881,9 +816,9 @@ for(vector&lt;int&gt;::size_type ix &#x3D; 0; ix !&#x3D; ivec.size(); ++ix, --cn
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="第03章 字符串、向量和数组">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">第03章 字符串、向量和数组</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -898,11 +833,23 @@ for(vector&lt;int&gt;::size_type ix &#x3D; 0; ix !&#x3D; ivec.size(); ++ix, --cn
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            七日卡农
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/C-Primer-5th/" class="post-category">
+                                    C++ Primer 5th
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/C-Primer-5th/">
+                        <span class="chip bg-color">C++ Primer 5th</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -932,100 +879,6 @@ for(vector&lt;int&gt;::size_type ix &#x3D; 0; ix !&#x3D; ivec.size(); ++ix, --cn
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
-
-    </div>
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
-            <div id="toc-content"></div>
-        </div>
-    </div>
-</div>
-
-<!-- TOC 悬浮按钮. -->
-
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fas fa-list-ul"></i>
-    </a>
-</div>
-
-
-<script src="/libs/tocbot/tocbot.min.js"></script>
-<script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
-        });
-
-        // modify the toc link href to support Chinese.
-        let i = 0;
-        let tocHeading = 'toc-heading-';
-        $('#toc-content a').each(function () {
-            $(this).attr('href', '#' + tocHeading + (++i));
-        });
-
-        // modify the heading title id to support Chinese.
-        i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
-            $(this).attr('id', tocHeading + (++i));
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).hide();
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).show();
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
-        
-    });
-</script>
 
     
 

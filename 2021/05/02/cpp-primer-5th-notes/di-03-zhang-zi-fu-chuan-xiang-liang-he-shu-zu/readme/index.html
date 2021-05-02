@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="七日卡农">
+    <meta name="keywords" content="第03章 字符串、向量和数组, 七日卡农">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>七日卡农</title>
+    <title>第03章 字符串、向量和数组 | 七日卡农</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">第03章 字符串、向量和数组</h1>
                 </div>
             </div>
         </div>
@@ -326,116 +326,35 @@
 
 
 
-<main class="post-container content">
+<main class="container content">
 
     
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
-<style>
-    #articleContent h1::before,
-    #articleContent h2::before,
-    #articleContent h3::before,
-    #articleContent h4::before,
-    #articleContent h5::before,
-    #articleContent h6::before {
-        display: block;
-        content: " ";
-        height: 100px;
-        margin-top: -100px;
-        visibility: hidden;
-    }
-
-    #articleContent :focus {
-        outline: none;
-    }
-
-    .toc-fixed {
-        position: fixed;
-        top: 64px;
-    }
-
-    .toc-widget {
-        width: 345px;
-        padding-left: 20px;
-    }
-
-    .toc-widget .toc-title {
-        padding: 35px 0 15px 17px;
-        font-size: 1.5rem;
-        font-weight: bold;
-        line-height: 1.5rem;
-    }
-
-    .toc-widget ol {
-        padding: 0;
-        list-style: none;
-    }
-
-    #toc-content {
-        padding-bottom: 30px;
-        overflow: auto;
-    }
-
-    #toc-content ol {
-        padding-left: 10px;
-    }
-
-    #toc-content ol li {
-        padding-left: 10px;
-    }
-
-    #toc-content .toc-link:hover {
-        color: #42b983;
-        font-weight: 700;
-        text-decoration: underline;
-    }
-
-    #toc-content .toc-link::before {
-        background-color: transparent;
-        max-height: 25px;
-
-        position: absolute;
-        right: 23.5vw;
-        display: block;
-    }
-
-    #toc-content .is-active-link {
-        color: #42b983;
-    }
-
-    #floating-toc-btn {
-        position: fixed;
-        right: 15px;
-        bottom: 76px;
-        padding-top: 15px;
-        margin-bottom: 0;
-        z-index: 998;
-    }
-
-    #floating-toc-btn .btn-floating {
-        width: 48px;
-        height: 48px;
-    }
-
-    #floating-toc-btn .btn-floating i {
-        line-height: 48px;
-        font-size: 1.4rem;
-    }
-</style>
-<div class="row">
-    <div id="main-content" class="col s12 m12 l9">
-        <!-- 文章内容详情 -->
+    <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/C-Primer-5th/">
+                                <span class="chip bg-color">C++ Primer 5th</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/C-Primer-5th/" class="post-category">
+                                C++ Primer 5th
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -495,10 +414,10 @@
 <p>头文件中通常不应该包含<code>using</code>声明。</p>
 <h2 id="标准库类型string（Library-string-Type）"><a href="#标准库类型string（Library-string-Type）" class="headerlink" title="标准库类型string（Library string Type）"></a>标准库类型string（Library string Type）</h2><p>标准库类型<code>string</code>表示可变长的字符序列，定义在头文件<em>string</em>中。</p>
 <h3 id="定义和初始化string对象（Defining-and-Initializing-strings）"><a href="#定义和初始化string对象（Defining-and-Initializing-strings）" class="headerlink" title="定义和初始化string对象（Defining and Initializing strings）"></a>定义和初始化string对象（Defining and Initializing strings）</h3><p>初始化<code>string</code>的方式：</p>
-<p><img src="Images/3-1.png" alt="3-1"></p>
+<p><img src="/2021/05/02/cpp-primer-5th-notes/di-03-zhang-zi-fu-chuan-xiang-liang-he-shu-zu/readme/3-1.png" alt="3-1"></p>
 <p>如果使用等号初始化一个变量，实际上执行的是拷贝初始化（copy initialization），编译器把等号右侧的初始值拷贝到新创建的对象中去。如果不使用等号，则执行的是直接初始化（direct initialization）。</p>
 <h3 id="string对象上的操作（Operations-on-strings）"><a href="#string对象上的操作（Operations-on-strings）" class="headerlink" title="string对象上的操作（Operations on strings）"></a>string对象上的操作（Operations on strings）</h3><p><code>string</code>的操作：</p>
-<p><img src="Images/3-2.png" alt="3-2"></p>
+<p><img src="/2021/05/02/cpp-primer-5th-notes/di-03-zhang-zi-fu-chuan-xiang-liang-he-shu-zu/readme/3-2.png" alt="3-2"></p>
 <p>在执行读取操作时，<code>string</code>对象会自动忽略开头的空白（空格符、换行符、制表符等）并从第一个真正的字符开始读取，直到遇见下一处空白为止。</p>
 <p>使用<code>getline</code>函数可以读取一整行字符。该函数只要遇到换行符就结束读取并返回结果，如果输入的开始就是一个换行符，则得到空<code>string</code>。触发<code>getline</code>函数返回的那个换行符实际上被丢弃掉了，得到的<code>string</code>对象中并不包含该换行符。</p>
 <p><code>size</code>函数返回<code>string</code>对象的长度，返回值是<code>string::size_type</code>类型，这是一种无符号类型。要使用<code>size_type</code>，必须先指定它是由哪种类型定义的。</p>
@@ -510,7 +429,7 @@ string s6 &#x3D; s1 + &quot;, &quot; + &quot;world&quot;;    &#x2F;&#x2F; ok: ea
 
 <p>为了与C兼容，C++语言中的字符串字面值并不是标准库<code>string</code>的对象。</p>
 <h3 id="处理string对象中的字符（Dealing-with-the-Characters-in-a-string）"><a href="#处理string对象中的字符（Dealing-with-the-Characters-in-a-string）" class="headerlink" title="处理string对象中的字符（Dealing with the Characters in a string）"></a>处理string对象中的字符（Dealing with the Characters in a string）</h3><p>头文件<em>cctype</em>中的字符操作函数：</p>
-<p><img src="Images/3-3.png" alt="3-3"></p>
+<p><img src="/2021/05/02/cpp-primer-5th-notes/di-03-zhang-zi-fu-chuan-xiang-liang-he-shu-zu/readme/3-3.png" alt="3-3"></p>
 <p>建议使用C++版本的C标准库头文件。C语言中名称为<em>name.h</em>的头文件，在C++中则被命名为<em>cname</em>。</p>
 <p>C++11提供了范围<code>for</code>（range for）语句，可以遍历给定序列中的每个元素并执行某种操作。</p>
 <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">for (declaration : expression)
@@ -531,7 +450,7 @@ for (auto c : str)      &#x2F;&#x2F; for every char in str
 <p>因为引用不是对象，所以不存在包含引用的<code>vector</code>。</p>
 <p>在早期的C++标准中，如果<code>vector</code>的元素还是<code>vector</code>，定义时必须在外层<code>vector</code>对象的右尖括号和其元素类型之间添加一个空格，如<code>vector&lt;vector&lt;int&gt; &gt;</code>。但是在C++11标准中，可以直接写成<code>vector&lt;vector&lt;int&gt;&gt;</code>，不需要添加空格。</p>
 <h3 id="定义和初始化vector对象（Defining-and-Initializing-vectors）"><a href="#定义和初始化vector对象（Defining-and-Initializing-vectors）" class="headerlink" title="定义和初始化vector对象（Defining and Initializing vectors）"></a>定义和初始化vector对象（Defining and Initializing vectors）</h3><p>初始化<code>vector</code>对象的方法：</p>
-<p><img src="Images/3-4.png" alt="3-4"></p>
+<p><img src="/2021/05/02/cpp-primer-5th-notes/di-03-zhang-zi-fu-chuan-xiang-liang-he-shu-zu/readme/3-4.png" alt="3-4"></p>
 <p>初始化<code>vector</code>对象时如果使用圆括号，可以说提供的值是用来构造（construct）<code>vector</code>对象的；如果使用的是花括号，则是在列表初始化（list initialize）该<code>vector</code>对象。</p>
 <p>可以只提供<code>vector</code>对象容纳的元素数量而省略初始值，此时会创建一个值初始化（value-initialized）的元素初值，并把它赋给容器中的所有元素。这个初值由<code>vector</code>对象中的元素类型决定。</p>
 <h3 id="向vector对象中添加元素（Adding-Elements-to-a-vector）"><a href="#向vector对象中添加元素（Adding-Elements-to-a-vector）" class="headerlink" title="向vector对象中添加元素（Adding Elements to a vector）"></a>向vector对象中添加元素（Adding Elements to a vector）</h3><p><code>push_back</code>函数可以把一个值添加到<code>vector</code>的尾端。</p>
@@ -542,7 +461,7 @@ for (int i &#x3D; 0; i !&#x3D; 100; ++i)
 
 <p>范围<code>for</code>语句体内不应该改变其所遍历序列的大小。</p>
 <h3 id="其他vector操作（Other-vector-Operations）"><a href="#其他vector操作（Other-vector-Operations）" class="headerlink" title="其他vector操作（Other vector Operations）"></a>其他vector操作（Other vector Operations）</h3><p><code>vector</code>支持的操作：</p>
-<p><img src="Images/3-5.png" alt="3-5"></p>
+<p><img src="/2021/05/02/cpp-primer-5th-notes/di-03-zhang-zi-fu-chuan-xiang-liang-he-shu-zu/readme/3-5.png" alt="3-5"></p>
 <p><code>size</code>函数返回<code>vector</code>对象中元素的个数，返回值是由<code>vector</code>定义的<code>size_type</code>类型。<code>vector</code>对象的类型包含其中元素的类型。</p>
 <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">vector&lt;int&gt;::size_type  &#x2F;&#x2F; ok
 vector::size_type       &#x2F;&#x2F; error<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
@@ -562,7 +481,7 @@ auto b &#x3D; ivec.begin(), e &#x3D; ivec.end();    &#x2F;&#x2F; b and e have th
 
 <p>如果容器为空，则<code>begin</code>和<code>end</code>返回的是同一个迭代器，都是尾后迭代器。</p>
 <p>标准容器迭代器的运算符：</p>
-<p><img src="Images/3-6.png" alt="3-6"></p>
+<p><img src="/2021/05/02/cpp-primer-5th-notes/di-03-zhang-zi-fu-chuan-xiang-liang-he-shu-zu/readme/3-6.png" alt="3-6"></p>
 <p>因为<code>end</code>返回的迭代器并不实际指向某个元素，所以不能对其进行递增或者解引用的操作。</p>
 <p>在<code>for</code>或者其他循环语句的判断条件中，最好使用<code>!=</code>而不是<code>&lt;</code>。所有标准库容器的迭代器都定义了<code>==</code>和<code>!=</code>，但是只有其中少数同时定义了<code>&lt;</code>运算符。</p>
 <p>如果<code>vector</code>或<code>string</code>对象是常量，则只能使用<code>const_iterator</code>迭代器，该迭代器只能读元素，不能写元素。</p>
@@ -575,7 +494,7 @@ auto it2 &#x3D; cv.begin();  &#x2F;&#x2F; it2 has type vector&lt;int&gt;::const_
 <p>C++11新增了<code>cbegin</code>和<code>cend</code>函数，不论<code>vector</code>或<code>string</code>对象是否为常量，都返回<code>const_iterator</code>迭代器。</p>
 <p>任何可能改变容器对象容量的操作，都会使该对象的迭代器失效。</p>
 <h3 id="迭代器运算（Iterator-Arithmetic）"><a href="#迭代器运算（Iterator-Arithmetic）" class="headerlink" title="迭代器运算（Iterator Arithmetic）"></a>迭代器运算（Iterator Arithmetic）</h3><p><code>vector</code>和<code>string</code>迭代器支持的操作：</p>
-<p><img src="Images/3-7.png" alt="3-7"></p>
+<p><img src="/2021/05/02/cpp-primer-5th-notes/di-03-zhang-zi-fu-chuan-xiang-liang-he-shu-zu/readme/3-7.png" alt="3-7"></p>
 <p><code>difference_type</code>类型用来表示两个迭代器间的距离，这是一种带符号整数类型。</p>
 <h2 id="数组（Arrays）"><a href="#数组（Arrays）" class="headerlink" title="数组（Arrays）"></a>数组（Arrays）</h2><p>数组类似<code>vector</code>，但数组的大小确定不变，不能随意向数组中添加元素。</p>
 <p>如果不清楚元素的确切个数，应该使用<code>vector</code>。</p>
@@ -611,7 +530,7 @@ string *p &#x3D; &amp;nums[0];   &#x2F;&#x2F; p points to the first element in n
 string *p2 &#x3D; nums;      &#x2F;&#x2F; equivalent to p2 &#x3D; &amp;nums[0]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>一维数组寻址公式：</p>
-<p><img src="Images/3-8.png" alt="3-8"></p>
+<p><img src="/2021/05/02/cpp-primer-5th-notes/di-03-zhang-zi-fu-chuan-xiang-liang-he-shu-zu/readme/3-8.png" alt="3-8"></p>
 <p>当使用数组作为一个<code>auto</code>变量的初始值时，推断得到的类型是指针而非数组。但<code>decltype</code>关键字不会发生这种转换，直接返回数组类型。</p>
 <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">int ia[] &#x3D; &#123;0,1,2,3,4,5,6,7,8,9&#125;;   &#x2F;&#x2F; ia is an array of ten ints
 auto ia2(ia);   &#x2F;&#x2F; ia2 is an int* that points to the first element in ia
@@ -632,7 +551,7 @@ int *last &#x3D; end(ia);    &#x2F;&#x2F; pointer one past the last element in i
 <h3 id="C风格字符串（C-Style-Character-Strings）"><a href="#C风格字符串（C-Style-Character-Strings）" class="headerlink" title="C风格字符串（C-Style Character Strings）"></a>C风格字符串（C-Style Character Strings）</h3><p>C风格字符串是将字符串存放在字符数组中，并以空字符结束（null terminated）。这不是一种类型，而是一种为了表达和使用字符串而形成的书写方法。</p>
 <p>C++标准支持C风格字符串，但是最好不要在C++程序中使用它们。对大多数程序来说，使用标准库<code>string</code>要比使用C风格字符串更加安全和高效。</p>
 <p>C风格字符串的函数：</p>
-<p><img src="Images/3-9.png" alt="3-9"></p>
+<p><img src="/2021/05/02/cpp-primer-5th-notes/di-03-zhang-zi-fu-chuan-xiang-liang-he-shu-zu/readme/3-9.png" alt="3-9"></p>
 <p>C风格字符串函数不负责验证其参数的正确性，传入此类函数的指针必须指向以空字符作为结尾的数组。</p>
 <h3 id="与旧代码的接口（Interfacing-to-Older-Code）"><a href="#与旧代码的接口（Interfacing-to-Older-Code）" class="headerlink" title="与旧代码的接口（Interfacing to Older Code）"></a>与旧代码的接口（Interfacing to Older Code）</h3><p>任何出现字符串字面值的地方都可以用以空字符结束的字符数组来代替：</p>
 <ul>
@@ -673,7 +592,7 @@ ia[2][3] &#x3D; arr[0][0][0];
 int (&amp;row)[4] &#x3D; ia[1];  &#x2F;&#x2F; binds row to the second four-element array in ia<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>多维数组寻址公式：</p>
-<p><img src="Images/3-10.png" alt="3-10"></p>
+<p><img src="/2021/05/02/cpp-primer-5th-notes/di-03-zhang-zi-fu-chuan-xiang-liang-he-shu-zu/readme/3-10.png" alt="3-10"></p>
 <p>使用范围<code>for</code>语句处理多维数组时，为了避免数组被自动转换成指针，语句中的外层循环控制变量必须声明成引用类型。</p>
 <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">for (const auto &amp;row : ia)  &#x2F;&#x2F; for every element in the outer array
     for (auto col : row)    &#x2F;&#x2F; for every element in the inner array
@@ -765,7 +684,11 @@ for (auto p &#x3D; ia; p !&#x3D; ia + 3; ++p)
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/C-Primer-5th/">
+                                    <span class="chip bg-color">C++ Primer 5th</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -943,9 +866,9 @@ for (auto p &#x3D; ia; p !&#x3D; ia + 3; ++p)
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="第04章 表达式">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">第04章 表达式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -960,11 +883,23 @@ for (auto p &#x3D; ia; p !&#x3D; ia + 3; ++p)
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            七日卡农
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/C-Primer-5th/" class="post-category">
+                                    C++ Primer 5th
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/C-Primer-5th/">
+                        <span class="chip bg-color">C++ Primer 5th</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -976,13 +911,13 @@ for (auto p &#x3D; ia; p !&#x3D; ia + 3; ++p)
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/05/02/cpp-primer-5th-notes/di-2-zhang-bian-liang-he-ji-ben-lei-xing/readme/">
+                <a href="/2021/05/02/cpp-primer-5th-notes/di-02-zhang-bian-liang-he-ji-ben-lei-xing/readme/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="第02章 变量和基本类型">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">第02章 变量和基本类型</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -997,11 +932,23 @@ for (auto p &#x3D; ia; p !&#x3D; ia + 3; ++p)
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            七日卡农
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/C-Primer-5th/" class="post-category">
+                                    C++ Primer 5th
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/C-Primer-5th/">
+                        <span class="chip bg-color">C++ Primer 5th</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1031,100 +978,6 @@ for (auto p &#x3D; ia; p !&#x3D; ia + 3; ++p)
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
-
-    </div>
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
-            <div id="toc-content"></div>
-        </div>
-    </div>
-</div>
-
-<!-- TOC 悬浮按钮. -->
-
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fas fa-list-ul"></i>
-    </a>
-</div>
-
-
-<script src="/libs/tocbot/tocbot.min.js"></script>
-<script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
-        });
-
-        // modify the toc link href to support Chinese.
-        let i = 0;
-        let tocHeading = 'toc-heading-';
-        $('#toc-content a').each(function () {
-            $(this).attr('href', '#' + tocHeading + (++i));
-        });
-
-        // modify the heading title id to support Chinese.
-        i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
-            $(this).attr('id', tocHeading + (++i));
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).hide();
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).show();
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
-        
-    });
-</script>
 
     
 

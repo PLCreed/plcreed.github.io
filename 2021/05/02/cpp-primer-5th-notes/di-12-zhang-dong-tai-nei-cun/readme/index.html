@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="七日卡农">
+    <meta name="keywords" content="第12章 动态内存, 七日卡农">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>七日卡农</title>
+    <title>第12章 动态内存 | 七日卡农</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">第12章 动态内存</h1>
                 </div>
             </div>
         </div>
@@ -326,116 +326,35 @@
 
 
 
-<main class="post-container content">
+<main class="container content">
 
     
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
-<style>
-    #articleContent h1::before,
-    #articleContent h2::before,
-    #articleContent h3::before,
-    #articleContent h4::before,
-    #articleContent h5::before,
-    #articleContent h6::before {
-        display: block;
-        content: " ";
-        height: 100px;
-        margin-top: -100px;
-        visibility: hidden;
-    }
-
-    #articleContent :focus {
-        outline: none;
-    }
-
-    .toc-fixed {
-        position: fixed;
-        top: 64px;
-    }
-
-    .toc-widget {
-        width: 345px;
-        padding-left: 20px;
-    }
-
-    .toc-widget .toc-title {
-        padding: 35px 0 15px 17px;
-        font-size: 1.5rem;
-        font-weight: bold;
-        line-height: 1.5rem;
-    }
-
-    .toc-widget ol {
-        padding: 0;
-        list-style: none;
-    }
-
-    #toc-content {
-        padding-bottom: 30px;
-        overflow: auto;
-    }
-
-    #toc-content ol {
-        padding-left: 10px;
-    }
-
-    #toc-content ol li {
-        padding-left: 10px;
-    }
-
-    #toc-content .toc-link:hover {
-        color: #42b983;
-        font-weight: 700;
-        text-decoration: underline;
-    }
-
-    #toc-content .toc-link::before {
-        background-color: transparent;
-        max-height: 25px;
-
-        position: absolute;
-        right: 23.5vw;
-        display: block;
-    }
-
-    #toc-content .is-active-link {
-        color: #42b983;
-    }
-
-    #floating-toc-btn {
-        position: fixed;
-        right: 15px;
-        bottom: 76px;
-        padding-top: 15px;
-        margin-bottom: 0;
-        z-index: 998;
-    }
-
-    #floating-toc-btn .btn-floating {
-        width: 48px;
-        height: 48px;
-    }
-
-    #floating-toc-btn .btn-floating i {
-        line-height: 48px;
-        font-size: 1.4rem;
-    }
-</style>
-<div class="row">
-    <div id="main-content" class="col s12 m12 l9">
-        <!-- 文章内容详情 -->
+    <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/C-Primer-5th/">
+                                <span class="chip bg-color">C++ Primer 5th</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/C-Primer-5th/" class="post-category">
+                                C++ Primer 5th
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -451,7 +370,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-02-02
+                    2021-05-02
                 </div>
                 
 
@@ -496,9 +415,9 @@
 shared_ptr&lt;list&lt;int&gt;&gt; p2;   &#x2F;&#x2F; shared_ptr that can point at a list of ints<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p><code>shared_ptr</code>和<code>unique_ptr</code>都支持的操作：</p>
-<p><img src="Images/12-1.png" alt="12-1"></p>
+<p><img src="/2021/05/02/cpp-primer-5th-notes/di-12-zhang-dong-tai-nei-cun/readme/12-1.png" alt="12-1"></p>
 <p><code>shared_ptr</code>独有的操作：</p>
-<p><img src="Images/12-2.png" alt="12-2"></p>
+<p><img src="/2021/05/02/cpp-primer-5th-notes/di-12-zhang-dong-tai-nei-cun/readme/12-2.png" alt="12-2"></p>
 <p><code>make_shared</code>函数（定义在头文件<em>memory</em>中）在动态内存中分配一个对象并初始化它，返回指向此对象的<code>shared_ptr</code>。</p>
 <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F; shared_ptr that points to an int with value 42
 shared_ptr&lt;int&gt; p3 &#x3D; make_shared&lt;int&gt;(42);
@@ -561,7 +480,7 @@ int *p2 &#x3D; new (nothrow) int;  &#x2F;&#x2F; if allocation fails, new returns
 shared_ptr&lt;int&gt; p2(new int(1024));     &#x2F;&#x2F; ok: uses direct initialization<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>默认情况下，用来初始化智能指针的内置指针必须指向动态内存，因为智能指针默认使用<code>delete</code>释放它所管理的对象。如果要将智能指针绑定到一个指向其他类型资源的指针上，就必须提供自定义操作来代替<code>delete</code>。</p>
-<p><img src="Images/12-3.png" alt="12-3"></p>
+<p><img src="/2021/05/02/cpp-primer-5th-notes/di-12-zhang-dong-tai-nei-cun/readme/12-3.png" alt="12-3"></p>
 <p>不要混合使用内置指针和智能指针。当将<code>shared_ptr</code>绑定到内置指针后，资源管理就应该交由<code>shared_ptr</code>负责。不应该再使用内置指针访问<code>shared_ptr</code>指向的内存。</p>
 <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F; ptr is created and initialized when process is called
 void process(shared_ptr&lt;int&gt; ptr)
@@ -641,7 +560,7 @@ unique_ptr&lt;int&gt; p2 &#x3D; make_unique&lt;int&gt;(42);<span aria-hidden="tr
 
 <p>由于<code>unique_ptr</code>独占其指向的对象，因此<code>unique_ptr</code>不支持普通的拷贝或赋值操作。</p>
 <p><code>unique_ptr</code>操作：</p>
-<p><img src="Images/12-4.png" alt="12-4"></p>
+<p><img src="/2021/05/02/cpp-primer-5th-notes/di-12-zhang-dong-tai-nei-cun/readme/12-4.png" alt="12-4"></p>
 <p><code>release</code>函数返回<code>unique_ptr</code>当前保存的指针并将其置为空。</p>
 <p><code>reset</code>函数成员接受一个可选的指针参数，重新设置<code>unique_ptr</code>保存的指针。如果<code>unique_ptr</code>不为空，则它原来指向的对象会被释放。</p>
 <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F; transfers ownership from p1 (which points to the string Stegosaurus) to p2
@@ -678,7 +597,7 @@ void f(destination &amp;d &#x2F;* other needed parameters *&#x2F;)
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="weak-ptr（weak-ptr）"><a href="#weak-ptr（weak-ptr）" class="headerlink" title="weak_ptr（weak_ptr）"></a>weak_ptr（weak_ptr）</h3><p><code>weak_ptr</code>是一种不控制所指向对象生存期的智能指针，它指向一个由<code>shared_ptr</code>管理的对象。将<code>weak_ptr</code>绑定到<code>shared_ptr</code>不会改变<code>shared_ptr</code>的引用计数。如果<code>shared_ptr</code>被销毁，即使有<code>weak_ptr</code>指向对象，对象仍然有可能被释放。</p>
-<p><img src="Images/12-5.png" alt="12-5"></p>
+<p><img src="/2021/05/02/cpp-primer-5th-notes/di-12-zhang-dong-tai-nei-cun/readme/12-5.png" alt="12-5"></p>
 <p>创建一个<code>weak_ptr</code>时，需要使用<code>shared_ptr</code>来初始化它。</p>
 <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">auto p &#x3D; make_shared&lt;int&gt;(42);
 weak_ptr&lt;int&gt; wp(p);    &#x2F;&#x2F; wp weakly shares with p; use count in p is unchanged<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
@@ -720,7 +639,7 @@ unique_ptr&lt;int[]&gt; up(new int[10]);
 up.release();   &#x2F;&#x2F; automatically uses delete[] to destroy its pointer<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>指向数组的<code>unique_ptr</code>：</p>
-<p><img src="Images/12-6.png" alt="12-6"></p>
+<p><img src="/2021/05/02/cpp-primer-5th-notes/di-12-zhang-dong-tai-nei-cun/readme/12-6.png" alt="12-6"></p>
 <p>与<code>unique_ptr</code>不同，<code>shared_ptr</code>不直接支持动态数组管理。如果想用<code>shared_ptr</code>管理动态数组，必须提供自定义的删除器。</p>
 <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F; to use a shared_ptr we must supply a deleter
 shared_ptr&lt;int&gt; sp(new int[10], [](int *p) &#123; delete[] p; &#125;);
@@ -736,7 +655,7 @@ for (size_t i &#x3D; 0; i !&#x3D; 10; ++i)
 auto const p &#x3D; alloc.allocate(n);   &#x2F;&#x2F; allocate n unconstructed strings<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>标准库<code>allocator</code>类及其算法：</p>
-<p><img src="Images/12-7.png" alt="12-7"></p>
+<p><img src="/2021/05/02/cpp-primer-5th-notes/di-12-zhang-dong-tai-nei-cun/readme/12-7.png" alt="12-7"></p>
 <p><code>allocator</code>分配的内存是未构造的，程序需要在此内存中构造对象。新标准库的<code>construct</code>函数接受一个指针和零或多个额外参数，在给定位置构造一个元素。额外参数用来初始化构造的对象，必须与对象类型相匹配。</p>
 <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">auto q &#x3D; p;     &#x2F;&#x2F; q will point to one past the last constructed element
 alloc.construct(q++);    &#x2F;&#x2F; *q is the empty string
@@ -752,7 +671,7 @@ alloc.construct(q++, &quot;hi&quot;);     &#x2F;&#x2F; *q is hi!<span aria-hidde
 <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">alloc.deallocate(p, n);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><code>allocator</code>算法：</p>
-<p><img src="Images/12-8.png" alt="12-8"></p>
+<p><img src="/2021/05/02/cpp-primer-5th-notes/di-12-zhang-dong-tai-nei-cun/readme/12-8.png" alt="12-8"></p>
 <p>传递给<code>uninitialized_copy</code>的目的位置迭代器必须指向未构造的内存，它直接在给定位置构造元素。返回（递增后的）目的位置迭代器。</p>
 
                 
@@ -817,7 +736,11 @@ alloc.construct(q++, &quot;hi&quot;);     &#x2F;&#x2F; *q is hi!<span aria-hidde
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/C-Primer-5th/">
+                                    <span class="chip bg-color">C++ Primer 5th</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -995,9 +918,9 @@ alloc.construct(q++, &quot;hi&quot;);     &#x2F;&#x2F; *q is hi!<span aria-hidde
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="第13章 拷贝控制">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">第13章 拷贝控制</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1012,11 +935,23 @@ alloc.construct(q++, &quot;hi&quot;);     &#x2F;&#x2F; *q is hi!<span aria-hidde
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            七日卡农
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/C-Primer-5th/" class="post-category">
+                                    C++ Primer 5th
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/C-Primer-5th/">
+                        <span class="chip bg-color">C++ Primer 5th</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1032,9 +967,9 @@ alloc.construct(q++, &quot;hi&quot;);     &#x2F;&#x2F; *q is hi!<span aria-hidde
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="第11章 关联容器">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">第11章 关联容器</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1049,11 +984,23 @@ alloc.construct(q++, &quot;hi&quot;);     &#x2F;&#x2F; *q is hi!<span aria-hidde
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            七日卡农
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/C-Primer-5th/" class="post-category">
+                                    C++ Primer 5th
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/C-Primer-5th/">
+                        <span class="chip bg-color">C++ Primer 5th</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1083,100 +1030,6 @@ alloc.construct(q++, &quot;hi&quot;);     &#x2F;&#x2F; *q is hi!<span aria-hidde
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
-
-    </div>
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
-            <div id="toc-content"></div>
-        </div>
-    </div>
-</div>
-
-<!-- TOC 悬浮按钮. -->
-
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fas fa-list-ul"></i>
-    </a>
-</div>
-
-
-<script src="/libs/tocbot/tocbot.min.js"></script>
-<script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
-        });
-
-        // modify the toc link href to support Chinese.
-        let i = 0;
-        let tocHeading = 'toc-heading-';
-        $('#toc-content a').each(function () {
-            $(this).attr('href', '#' + tocHeading + (++i));
-        });
-
-        // modify the heading title id to support Chinese.
-        i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
-            $(this).attr('id', tocHeading + (++i));
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).hide();
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).show();
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
-        
-    });
-</script>
 
     
 
